@@ -13,6 +13,7 @@
 }
 
 .footer-brand .logo { margin-bottom: 18px; }
+.footer-brand .logo-img { height: 38px; }
 .footer-brand p { color: var(--gray); font-size: 14px; max-width: 300px; margin-bottom: 24px; }
 
 .social-row { display: flex; gap: 12px; }
