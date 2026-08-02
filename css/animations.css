@@ -1,4 +1,0 @@
-.fade-in { animation: fadeIn 0.8s var(--ease) forwards; }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-.counted { font-variant-numeric: tabular-nums; }
