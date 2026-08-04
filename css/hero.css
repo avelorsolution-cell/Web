@@ -79,6 +79,21 @@
   animation: rise 0.9s var(--ease) 0.55s forwards;
 }
 
+.hero-whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 22px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray);
+  transition: color 0.25s var(--ease);
+  opacity: 0;
+  animation: rise 0.9s var(--ease) 0.65s forwards;
+}
+.hero-whatsapp-link svg { width: 18px; height: 18px; color: #25D366; flex-shrink: 0; }
+.hero-whatsapp-link:hover { color: var(--white); }
+
 @keyframes rise {
   from { opacity: 0; transform: translateY(18px); }
   to { opacity: 1; transform: translateY(0); }
@@ -138,9 +153,9 @@
   border-radius: 10px;
   font-size: 13px;
   font-weight: 700;
+  max-width: 200px;
   box-shadow: 0 20px 50px -15px rgba(212,175,55,0.6);
 }
-.orbit-badge small { display: block; font-weight: 500; font-size: 10px; letter-spacing: 0.08em; opacity: 0.75; text-transform: uppercase; }
 
 .scroll-cue {
   position: absolute;
