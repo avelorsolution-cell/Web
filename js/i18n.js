@@ -22,27 +22,28 @@
     "svc.autocad": {en:"AutoCAD Drafting", ar:"رسومات الأوتوكاد"},
 
     "footer.quicklinks": {en:"Quick Links", ar:"روابط سريعة"},
-    "footer.stayupdated": {en:"Stay Updated", ar:"ابق على اطلاع"},
-    "footer.newsletter.desc": {en:"Subscribe for occasional updates on new work and openings.", ar:"اشترك لتصلك آخر الأعمال والفرص من حين لآخر."},
-    "footer.newsletter.placeholder": {en:"Your email", ar:"بريدك الإلكتروني"},
+    "footer.startconvo": {en:"Start a Conversation", ar:"ابدأ محادثة"},
+    "footer.startconvo.desc": {en:"Have a project in mind? Contact us through WhatsApp or email.", ar:"هل لديك مشروع في ذهنك؟ تواصل معنا عبر واتساب أو البريد الإلكتروني."},
     "footer.tagline": {en:"A premium digital agency crafting websites, brands and visuals for businesses that want to stand out.", ar:"وكالة رقمية متميزة نصمم من خلالها مواقع الويب والهويات التجارية والتصاميم البصرية للشركات التي تسعى للتميز."},
     "footer.rights": {en:"AVELOR Creative Solutions. All rights reserved.", ar:"افيلور للحلول الإبداعية. جميع الحقوق محفوظة."},
     "footer.privacy": {en:"Privacy Policy", ar:"سياسة الخصوصية"},
-    "footer.terms": {en:"Terms of Service", ar:"شروط الخدمة"},
+    "footer.terms": {en:"Terms and Conditions", ar:"الشروط والأحكام"},
 
-    "home.hero.eyebrow": {en:"Digital Agency", ar:"وكالة رقمية"},
+    "home.hero.eyebrow": {en:"Digital Agency in Doha, Qatar", ar:"وكالة رقمية في الدوحة، قطر"},
     "home.hero.desc": {en:"AVELOR partners with ambitious businesses to design websites, brands and visuals that don't just look premium — they perform. From first sketch to launch day, we handle it end to end.", ar:"تتعاون افيلور مع الشركات الطموحة لتصميم مواقع وهويات وتصاميم بصرية لا تبدو فاخرة فحسب، بل تحقق نتائج فعلية. من أول فكرة وحتى يوم الإطلاق، نتولى كل التفاصيل."},
     "home.hero.cta1": {en:"Explore Services", ar:"استكشف خدماتنا"},
     "home.hero.cta2": {en:"Start Your Project", ar:"ابدأ مشروعك"},
-    "home.hero.badge": {en:"Projects Delivered", ar:"مشروع تم تسليمه"},
+    "home.hero.badge": {en:"Doha-Based Creative Studio", ar:"استوديو إبداعي مقره الدوحة"},
+    "home.hero.whatsapp": {en:"Chat on WhatsApp", ar:"تواصل عبر واتساب"},
 
-    "home.about.badge": {en:"Est. Agency", ar:"وكالة معتمدة"},
+    "home.about.badge": {en:"Doha-Based Creative Studio", ar:"استوديو إبداعي مقره الدوحة"},
     "home.about.eyebrow": {en:"Who We Are", ar:"من نحن"},
     "home.about.title": {en:"A creative studio built for businesses that refuse to look ordinary", ar:"استوديو إبداعي بُني للشركات التي ترفض أن تبدو عادية"},
     "home.about.desc": {en:"AVELOR Creative Solutions is a full-service digital agency helping startups, corporates and local brands turn ideas into polished digital presences — websites, identities and visuals that earn trust the moment someone lands on them.", ar:"افيلور للحلول الإبداعية وكالة رقمية متكاملة الخدمات تساعد الشركات الناشئة والمؤسسات والعلامات المحلية على تحويل أفكارها إلى حضور رقمي متقن — مواقع وهويات وتصاميم بصرية تكسب الثقة من أول لحظة."},
-    "home.about.stat1": {en:"Projects Completed", ar:"مشروع مكتمل"},
-    "home.about.stat2": {en:"Happy Clients", ar:"عميل سعيد"},
-    "home.about.stat3": {en:"Years Experience", ar:"سنوات خبرة"},
+    "home.about.fact1": {en:"6 Creative Services", ar:"6 خدمات إبداعية"},
+    "home.about.fact2": {en:"Based in Doha, Qatar", ar:"مقرنا في الدوحة، قطر"},
+    "home.about.fact3": {en:"English and Arabic Support", ar:"دعم باللغتين العربية والإنجليزية"},
+    "home.about.fact4": {en:"Custom Project Solutions", ar:"حلول مخصصة لكل مشروع"},
 
     "home.svc.eyebrow": {en:"What We Do", ar:"ماذا نقدم"},
     "home.svc.title": {en:"Services built to grow your brand", ar:"خدمات صُممت لتنمية علامتك التجارية"},
@@ -54,15 +55,15 @@
     "home.svc.branding.desc": {en:"Logos, identity systems and brand guidelines that tell a consistent story.", ar:"شعارات وأنظمة هوية وأدلة استخدام تحكي قصة متكاملة ومتناسقة."},
     "home.svc.marketing.desc": {en:"SEO, social and paid campaigns that put your brand in front of the right people.", ar:"تحسين محركات البحث وحملات التواصل الاجتماعي والإعلانات المدفوعة لتصل علامتك للجمهور المناسب."},
 
-    "home.why.title": {en:"Six reasons clients stay with us", ar:"ستة أسباب تجعل عملاءنا يستمرون معنا"},
+    "home.why.title": {en:"Why Choose AVELOR", ar:"لماذا تختار افيلور"},
     "home.why.1.title": {en:"Premium Design", ar:"تصميم متميز"},
     "home.why.1.desc": {en:"Every project is designed to feel distinct, never templated.", ar:"كل مشروع يُصمم ليكون مميزًا وفريدًا، لا يعتمد على قوالب جاهزة."},
-    "home.why.2.title": {en:"Creative Team", ar:"فريق إبداعي"},
-    "home.why.2.desc": {en:"Designers, developers and strategists working as one unit.", ar:"مصممون ومطورون واستراتيجيون يعملون كفريق واحد متكامل."},
+    "home.why.2.title": {en:"Founder-Led Communication", ar:"تواصل مباشر مع المؤسس"},
+    "home.why.2.desc": {en:"You work directly with the person delivering your project — no account managers in between.", ar:"تتواصل مباشرة مع الشخص الذي ينفذ مشروعك — دون وسطاء أو مديري حسابات."},
     "home.why.3.title": {en:"Fast Delivery", ar:"تسليم سريع"},
     "home.why.3.desc": {en:"Structured sprints keep every project on schedule.", ar:"مراحل عمل منظمة تضمن تسليم كل مشروع في موعده."},
-    "home.why.4.title": {en:"Affordable Pricing", ar:"أسعار مناسبة"},
-    "home.why.4.desc": {en:"Transparent quotes with no hidden costs, ever.", ar:"عروض أسعار شفافة بلا أي تكاليف خفية على الإطلاق."},
+    "home.why.4.title": {en:"Transparent Pricing", ar:"أسعار شفافة"},
+    "home.why.4.desc": {en:"Clear quotations with scope and costs confirmed before work begins.", ar:"عروض أسعار واضحة يتم فيها تأكيد النطاق والتكلفة قبل بدء العمل."},
     "home.why.5.title": {en:"Latest Technology", ar:"أحدث التقنيات"},
     "home.why.5.desc": {en:"Modern frameworks and tools built for performance.", ar:"أدوات وتقنيات حديثة مبنية لتحقيق أفضل أداء."},
     "home.why.6.title": {en:"Dedicated Support", ar:"دعم مخصص"},
@@ -96,25 +97,26 @@
     "home.process.7.title": {en:"Support", ar:"الدعم"},
     "home.process.7.desc": {en:"Ongoing maintenance and improvements post-launch.", ar:"صيانة وتحسينات مستمرة بعد الإطلاق."},
 
-    "home.testi.eyebrow": {en:"Client Reviews", ar:"آراء العملاء"},
-    "home.testi.title": {en:"What our clients say", ar:"ماذا يقول عملاؤنا"},
-    "home.testi.1.quote": {en:"AVELOR redesigned our entire website in three weeks and inquiries doubled the following month. Communication was clear from day one.", ar:"أعادت افيلور تصميم موقعنا بالكامل خلال ثلاثة أسابيع، وتضاعفت الاستفسارات في الشهر التالي. كان التواصل واضحًا منذ اليوم الأول."},
-    "home.testi.1.role": {en:"Founder, Levant Table", ar:"المؤسسة، ليفانت تيبل"},
-    "home.testi.2.quote": {en:"The 3D renders they produced for our launch were indistinguishable from real photography. Buyers were sold before the building was finished.", ar:"التصاميم ثلاثية الأبعاد التي أنتجوها لإطلاقنا كانت أشبه بصور حقيقية تمامًا. اقتنع المشترون قبل حتى اكتمال المبنى."},
-    "home.testi.2.role": {en:"Director, Solace Residences", ar:"المدير، سولاس ريزيدنسز"},
-    "home.testi.3.quote": {en:"Professional, fast, and genuinely creative. Our new brand identity feels like us — finally.", ar:"احترافية وسرعة وإبداع حقيقي. هويتنا التجارية الجديدة أصبحت تعبر عنا أخيرًا."},
-    "home.testi.3.role": {en:"CEO, Ferro & Co.", ar:"الرئيسة التنفيذية، فيرو آند كو"},
-
+    "home.expect.eyebrow": {en:"What You Can Expect", ar:"ماذا يمكن أن تتوقع"},
+    "home.expect.title": {en:"How We Work With You", ar:"كيف نعمل معك"},
+    "home.expect.1.title": {en:"Clear Communication", ar:"تواصل واضح"},
+    "home.expect.1.desc": {en:"Clients receive clear project updates and next steps.", ar:"يحصل العملاء على تحديثات واضحة حول المشروع وخطواته القادمة."},
+    "home.expect.2.title": {en:"Custom Creative Work", ar:"عمل إبداعي مخصص"},
+    "home.expect.2.desc": {en:"Every project is tailored to the business, audience and objectives.", ar:"كل مشروع مصمم خصيصًا ليناسب النشاط التجاري والجمهور والأهداف."},
+    "home.expect.3.title": {en:"Transparent Quotations", ar:"عروض أسعار شفافة"},
+    "home.expect.3.desc": {en:"Scope, deliverables, timeline and revision terms are confirmed before work begins.", ar:"يتم تأكيد النطاق والمخرجات والجدول الزمني وشروط التعديلات قبل بدء العمل."},
+    "home.expect.4.title": {en:"Support After Delivery", ar:"الدعم بعد التسليم"},
+    "home.expect.4.desc": {en:"Technical support and future improvements are available when required.", ar:"الدعم الفني والتحسينات المستقبلية متاحة عند الحاجة."},
     "home.cta.title": {en:"Let's Build Something Amazing Together", ar:"لنبنِ شيئًا رائعًا معًا"},
     "home.cta.desc": {en:"Tell us about your project and we'll get back to you within one business day with a tailored quote.", ar:"أخبرنا عن مشروعك وسنرد عليك خلال يوم عمل واحد بعرض سعر مخصص."},
 
-    "about.hero.title": {en:"The studio behind AVELOR", ar:"الاستوديو وراء افيلور"},
+    "about.hero.title": {en:"A Founder-Led Creative Studio in Doha", ar:"استوديو إبداعي بقيادة المؤسس في الدوحة"},
     "about.hero.sub": {en:"We're a small team with a simple belief: your digital presence should feel as considered as your best work.", ar:"نحن فريق صغير نؤمن بفكرة بسيطة: حضوركم الرقمي يجب أن يعكس نفس الاهتمام الذي تضعونه في أفضل أعمالكم."},
     "about.badge": {en:"Our Story", ar:"قصتنا"},
     "about.story.eyebrow": {en:"Company Story", ar:"قصة الشركة"},
     "about.story.title": {en:"Started by people who were tired of ordinary websites", ar:"بدأت على يد أشخاص سئموا من المواقع العادية"},
-    "about.story.p1": {en:"AVELOR Creative Solutions began with a straightforward frustration: too many businesses were settling for template websites that didn't reflect the quality of their work. We set out to build a studio that treats every site, brand and render as its own creative problem — never a copy-paste job.", ar:"بدأت افيلور للحلول الإبداعية من إحباط بسيط: الكثير من الشركات كانت تكتفي بمواقع جاهزة لا تعكس جودة عملها. قررنا بناء استوديو يتعامل مع كل موقع وهوية وتصور ثلاثي الأبعاد كمشروع إبداعي مستقل — وليس كنسخة مكررة."},
-    "about.story.p2": {en:"Today we work with small businesses, startups, and established companies across construction, real estate, hospitality and retail, delivering projects that are as functional as they are distinctive.", ar:"اليوم نعمل مع شركات صغيرة وناشئة ومؤسسات راسخة في قطاعات الإنشاءات والعقارات والضيافة والتجزئة، ونقدم مشاريع عملية ومميزة في آنٍ واحد."},
+    "about.story.p1": {en:"AVELOR Creative Solutions is a founder-led creative studio based in Doha, Qatar. We help businesses build professional digital experiences through web design, website maintenance, graphic design, branding, 3D visualization and digital marketing.", ar:"افيلور للحلول الإبداعية استوديو إبداعي بقيادة المؤسس، ومقره الدوحة، قطر. نساعد الشركات على بناء تجارب رقمية احترافية من خلال تصميم المواقع، وصيانتها، والتصميم الجرافيكي، والهوية التجارية، والتصور ثلاثي الأبعاد، والتسويق الرقمي."},
+    "about.story.p2": {en:"Every project is managed through direct communication, a clearly defined scope and careful attention to detail — whether you're a startup, a small business or an established company in construction, real estate, hospitality or retail.", ar:"تتم إدارة كل مشروع من خلال تواصل مباشر، ونطاق عمل واضح، واهتمام دقيق بالتفاصيل — سواء كنت شركة ناشئة، أو عملاً صغيرًا، أو مؤسسة راسخة في قطاع الإنشاءات أو العقارات أو الضيافة أو التجزئة."},
 
     "about.why.1.title": {en:"Mission", ar:"الرسالة"},
     "about.why.1.desc": {en:"To give every client a digital presence that performs as well as it looks — built with care, delivered on time.", ar:"منح كل عميل حضورًا رقميًا يؤدي بكفاءة كما يبدو جميلاً — مبني بعناية ومُسلَّم في الوقت المحدد."},
@@ -125,8 +127,8 @@
 
     "about.diff.title": {en:"What makes working with us different", ar:"ما الذي يميز العمل معنا"},
     "about.diff.sub": {en:"We keep teams small and senior, so the people who pitch your project are the people who build it.", ar:"نحافظ على فرق عمل صغيرة وذات خبرة عالية، ليكون من يقدم عرض مشروعكم هو نفسه من ينفذه."},
-    "about.diff.1.title": {en:"One point of contact", ar:"نقطة تواصل واحدة"},
-    "about.diff.1.desc": {en:"No handoffs between departments — your project manager knows every detail from day one.", ar:"بلا تنقل بين الأقسام — مدير مشروعكم يعرف كل التفاصيل منذ اليوم الأول."},
+    "about.diff.1.title": {en:"Direct Communication", ar:"تواصل مباشر"},
+    "about.diff.1.desc": {en:"No handoffs between departments — you communicate directly with the person doing the work.", ar:"بلا تنقل بين الأقسام — تتواصل مباشرة مع الشخص الذي ينفذ العمل."},
     "about.diff.2.title": {en:"Transparent process", ar:"عملية شفافة"},
     "about.diff.2.desc": {en:"You'll always know what phase we're in and what's coming next.", ar:"ستعرفون دائمًا في أي مرحلة نحن وما الذي سيأتي بعدها."},
     "about.diff.3.title": {en:"Built to last", ar:"مبني ليدوم"},
@@ -183,8 +185,10 @@
     "svcpage.cta.desc": {en:"Message us on WhatsApp and we'll help you figure out the right starting point.", ar:"راسلنا عبر واتساب وسنساعدك في تحديد نقطة البداية المناسبة."},
     "svcpage.cta.contactform": {en:"Contact Form", ar:"نموذج التواصل"},
 
-    "pf.hero.title": {en:"Selected work", ar:"أعمال مختارة"},
-    "pf.hero.sub": {en:"Websites, brand identities, visuals and campaigns delivered for clients across industries.", ar:"مواقع وهويات تجارية وتصاميم بصرية وحملات نفذناها لعملاء من قطاعات مختلفة."},
+    "pf.hero.title": {en:"Selected Work and Creative Projects", ar:"أعمال مختارة ومشاريع إبداعية"},
+    "pf.hero.sub": {en:"A collection of concept and creative projects showing how AVELOR approaches web design, branding, 3D visualization and graphic design.", ar:"مجموعة من المشاريع التصورية والإبداعية التي تُظهر أسلوب افيلور في تصميم المواقع، والهوية التجارية، والتصور ثلاثي الأبعاد، والتصميم الجرافيكي."},
+    "pf.disclaimer": {en:"These self-initiated concept projects were created to demonstrate AVELOR\u2019s design process and creative capabilities. They were not commissioned by the featured brands shown.", ar:"هذه المشاريع مبادرات تصورية ذاتية من افيلور لعرض أسلوب عملنا وقدراتنا الإبداعية، ولم يتم تكليفنا بها من قبل العلامات التجارية الظاهرة."},
+    "pf.conceptbadge": {en:"Concept Project", ar:"مشروع تصوري"},
     "pf.filter.all": {en:"All", ar:"الكل"},
 
     "pf.card1.title": {en:"Smart Home — Exterior Render", ar:"منزل ذكي — تصور خارجي"},
@@ -219,14 +223,28 @@
     "pf.cta.title": {en:"Like what you see?", ar:"أعجبك ما رأيت؟"},
     "pf.cta.desc": {en:"Let's talk about a project that fits your brand just as well.", ar:"لنتحدث عن مشروع يناسب علامتكم التجارية تمامًا."},
 
-    "contact.hero.title": {en:"Let's talk about your project", ar:"لنتحدث عن مشروعك"},
-    "contact.hero.sub": {en:"Fill out the form, message us on WhatsApp, or drop by the office — whatever's easiest for you.", ar:"املأ النموذج، راسلنا عبر واتساب، أو تفضل بزيارة مكتبنا — أيًا كان الأسهل بالنسبة لك."},
+    "contact.hero.title": {en:"Let's Discuss Your Next Project", ar:"لنتحدث عن مشروعك القادم"},
+    "contact.hero.sub": {en:"Tell us what you are planning, which services you need and your preferred timeline. We will respond with the next steps and a tailored quotation.", ar:"أخبرنا بما تخطط له، والخدمات التي تحتاجها، والجدول الزمني المفضل لديك. سنرد عليك بالخطوات التالية وعرض سعر مخصص."},
     "contact.info.email.label": {en:"Email", ar:"البريد الإلكتروني"},
     "contact.info.phone.label": {en:"Phone", ar:"الهاتف"},
     "contact.info.whatsapp.label": {en:"WhatsApp", ar:"واتساب"},
-    "contact.info.location.label": {en:"located In", ar:"الموقع"},
-    "contact.info.location.value": {en:"Doha, Qatar", ar:"الدوحة، قطر"},
-    "contact.form.desc": {en:"Tell us a bit about your project and we'll respond within one business day.", ar:"أخبرنا قليلاً عن مشروعك وسنرد عليك خلال يوم عمل واحد."},
+    "contact.info.location.label": {en:"Based in", ar:"مقرنا"},
+    "contact.info.location.value": {en:"Based in Doha, Qatar", ar:"مقرنا في الدوحة، قطر"},
+    "contact.info.location.serving": {en:"Serving businesses across Qatar and internationally", ar:"نخدم الشركات داخل قطر وخارجها"},
+    "contact.info.location.appointment": {en:"Meetings available by appointment", ar:"الاجتماعات متاحة بموعد مسبق"},
+    "contact.form.desc": {en:"Share a few details about your project below and we'll get back to you with next steps.", ar:"شارك بعض التفاصيل عن مشروعك أدناه وسنعاود التواصل معك بالخطوات التالية."},
+    "contact.form.company.label": {en:"Company Name", ar:"اسم الشركة"},
+    "contact.form.company.placeholder": {en:"Your company", ar:"اسم شركتك"},
+    "contact.form.phone.label": {en:"Phone or WhatsApp", ar:"الهاتف أو واتساب"},
+    "contact.form.budget.label": {en:"Estimated Budget", ar:"الميزانية التقديرية"},
+    "contact.form.budget.placeholder": {en:"Optional", ar:"اختياري"},
+    "contact.form.timeline.label": {en:"Preferred Timeline", ar:"الجدول الزمني المفضل"},
+    "contact.form.timeline.placeholder": {en:"e.g. 4-6 weeks", ar:"مثال: 4-6 أسابيع"},
+    "contact.form.language.label": {en:"Preferred Language", ar:"اللغة المفضلة"},
+    "contact.form.language.en": {en:"English", ar:"الإنجليزية"},
+    "contact.form.language.ar": {en:"Arabic", ar:"العربية"},
+    "contact.form.language.either": {en:"Either", ar:"كلاهما"},
+    "contact.form.consent.error": {en:"Please confirm you agree before sending.", ar:"يرجى تأكيد الموافقة قبل الإرسال."},
     "contact.form.name.label": {en:"Full Name", ar:"الاسم الكامل"},
     "contact.form.name.placeholder": {en:"Your name", ar:"اسمك"},
     "contact.form.name.error": {en:"Please enter your name.", ar:"يرجى إدخال اسمك."},
@@ -237,8 +255,59 @@
     "contact.form.message.placeholder": {en:"Tell us about your project...", ar:"أخبرنا عن مشروعك..."},
     "contact.form.message.error": {en:"Tell us a little about your project.", ar:"أخبرنا قليلاً عن مشروعك."},
     "contact.form.submit": {en:"Send Message", ar:"إرسال الرسالة"},
-    "contact.form.success.title": {en:"Message sent", ar:"تم إرسال الرسالة"},
-    "contact.form.success.desc": {en:"Thanks for reaching out — we'll be in touch within one business day.", ar:"شكرًا لتواصلك — سنتواصل معك خلال يوم عمل واحد."},
+    "contact.form.success.title": {en:"Opening your email app\u2026", ar:"جارٍ فتح تطبيق البريد الإلكتروني…"},
+    "contact.form.success.desc": {en:"Your message has been prepared. Please press send in your email app to deliver it to info@avelorsolutions.com. If it doesn't open, email us directly or use WhatsApp.", ar:"تم إعداد رسالتك. يرجى الضغط على إرسال في تطبيق البريد الإلكتروني لإرسالها إلى info@avelorsolutions.com. إذا لم يفتح التطبيق، راسلنا مباشرة أو تواصل عبر واتساب."},
+
+    "legal.updated": {en:"Last updated: August 2026", ar:"آخر تحديث: أغسطس 2026"},
+    "legal.privacy.title": {en:"Privacy Policy", ar:"سياسة الخصوصية"},
+    "legal.privacy.h1": {en:"Information We Collect", ar:"المعلومات التي نجمعها"},
+    "legal.privacy.p1": {en:"When you contact AVELOR Creative Solutions through our website, WhatsApp or email, we may collect the information you choose to share, such as your name, company name, email address, phone number, service of interest, budget range, timeline and project description.", ar:"عندما تتواصل مع افيلور للحلول الإبداعية عبر موقعنا أو واتساب أو البريد الإلكتروني، قد نجمع المعلومات التي تختار مشاركتها، مثل اسمك، واسم شركتك، وبريدك الإلكتروني، ورقم هاتفك، والخدمة التي تهتم بها، والميزانية التقديرية، والجدول الزمني، ووصف المشروع."},
+    "legal.privacy.h2": {en:"Contact Form Information", ar:"معلومات نموذج التواصل"},
+    "legal.privacy.p2": {en:"Our contact form is used to prepare an enquiry that is sent to us by email or WhatsApp at your initiation. This website does not use a backend database, so form submissions are not automatically collected or stored on a server.", ar:"يُستخدم نموذج التواصل لدينا لإعداد استفسار يتم إرساله إلينا عبر البريد الإلكتروني أو واتساب بمبادرة منك. لا يستخدم هذا الموقع قاعدة بيانات خلفية، لذا لا تُجمع أو تُخزَّن بيانات النموذج تلقائيًا على أي خادم."},
+    "legal.privacy.h3": {en:"Purpose of Collecting Information", ar:"الغرض من جمع المعلومات"},
+    "legal.privacy.p3": {en:"Information you provide is used only to respond to your enquiry, prepare a quotation, deliver the services you request, and communicate with you about your project. We do not sell or rent your information to third parties.", ar:"تُستخدم المعلومات التي تقدمها فقط للرد على استفسارك، وإعداد عرض السعر، وتقديم الخدمات التي تطلبها، والتواصل معك بشأن مشروعك. نحن لا نبيع أو نؤجر معلوماتك لأي طرف ثالث."},
+    "legal.privacy.h4": {en:"Analytics and Cookies", ar:"التحليلات وملفات تعريف الارتباط"},
+    "legal.privacy.p4": {en:"This website may use basic analytics tools to understand general visitor behaviour, such as which pages are viewed. Analytics data is aggregated and is not used to personally identify visitors. If cookies are used for this purpose, you can disable them in your browser settings at any time.", ar:"قد يستخدم هذا الموقع أدوات تحليل أساسية لفهم سلوك الزوار بشكل عام، مثل الصفحات التي تتم زيارتها. بيانات التحليلات مجمّعة ولا تُستخدم للتعرف على هوية الزوار شخصيًا. إذا استُخدمت ملفات تعريف الارتباط لهذا الغرض، يمكنك تعطيلها من إعدادات متصفحك في أي وقت."},
+    "legal.privacy.h5": {en:"Third-Party Services", ar:"خدمات الأطراف الثالثة"},
+    "legal.privacy.p5": {en:"We may use trusted third-party services such as WhatsApp Business, email providers and web hosting providers to operate this website and communicate with clients. These providers have their own privacy practices, which we encourage you to review where relevant.", ar:"قد نستخدم خدمات موثوقة من أطراف ثالثة مثل واتساب بيزنس، ومزودي البريد الإلكتروني، ومزودي الاستضافة لتشغيل هذا الموقع والتواصل مع العملاء. لهذه الجهات سياسات خصوصية خاصة بها، ونشجعك على الاطلاع عليها عند الحاجة."},
+    "legal.privacy.h6": {en:"Data Retention", ar:"مدة الاحتفاظ بالبيانات"},
+    "legal.privacy.p6": {en:"We retain enquiry and project-related information only for as long as necessary to respond to your request, deliver agreed services, and meet reasonable business and legal record-keeping needs.", ar:"نحتفظ بمعلومات الاستفسارات والمشاريع فقط للمدة اللازمة للرد على طلبك، وتقديم الخدمات المتفق عليها، والوفاء بمتطلبات حفظ السجلات التجارية والقانونية المعقولة."},
+    "legal.privacy.h7": {en:"Information Security", ar:"أمن المعلومات"},
+    "legal.privacy.p7": {en:"We take reasonable steps to protect information shared with us. However, no method of transmission over the internet or email is completely secure, and we cannot guarantee absolute security.", ar:"نتخذ خطوات معقولة لحماية المعلومات التي تُشارك معنا. ومع ذلك، لا توجد وسيلة نقل عبر الإنترنت أو البريد الإلكتروني آمنة بشكل كامل، ولا يمكننا ضمان أمان مطلق."},
+    "legal.privacy.h8": {en:"Access, Correction and Deletion Requests", ar:"طلبات الوصول والتصحيح والحذف"},
+    "legal.privacy.p8": {en:"You may request access to, correction of, or deletion of personal information you have shared with us at any time by contacting us using the details below.", ar:"يمكنك طلب الوصول إلى المعلومات الشخصية التي شاركتها معنا أو تصحيحها أو حذفها في أي وقت من خلال التواصل معنا عبر البيانات أدناه."},
+    "legal.privacy.h9": {en:"Privacy Contact Details", ar:"بيانات التواصل بخصوص الخصوصية"},
+    "legal.privacy.p9": {en:"If you have questions about this Privacy Policy or how your information is handled, please contact us:", ar:"إذا كانت لديك أي أسئلة حول سياسة الخصوصية هذه أو كيفية التعامل مع معلوماتك، يرجى التواصل معنا:"},
+
+    "legal.terms.title": {en:"Terms and Conditions", ar:"الشروط والأحكام"},
+    "legal.terms.h1": {en:"Quotations", ar:"عروض الأسعار"},
+    "legal.terms.p1": {en:"Quotations are prepared based on the information provided during our initial discussion. Prices are valid for 14 days unless stated otherwise, and may be revised if the scope of the project changes after the quotation is issued.", ar:"يتم إعداد عروض الأسعار بناءً على المعلومات المقدمة أثناء النقاش الأولي. تظل الأسعار سارية لمدة 14 يومًا ما لم يُذكر خلاف ذلك، وقد تُعدَّل في حال تغيّر نطاق المشروع بعد إصدار العرض."},
+    "legal.terms.h2": {en:"Scope of Work", ar:"نطاق العمل"},
+    "legal.terms.p2": {en:"The scope, deliverables, timeline and revision terms for each project are confirmed in writing before work begins. Work outside the agreed scope may require a separate quotation.", ar:"يتم تأكيد نطاق كل مشروع ومخرجاته وجدوله الزمني وشروط التعديلات كتابيًا قبل بدء العمل. أي عمل خارج النطاق المتفق عليه قد يتطلب عرض سعر منفصل."},
+    "legal.terms.h3": {en:"Deposits and Payments", ar:"العربون والمدفوعات"},
+    "legal.terms.p3": {en:"Projects typically require an upfront deposit before work begins, with the balance due on delivery or according to agreed milestones. Payment terms are confirmed for each project individually.", ar:"تتطلب المشاريع عادةً دفعة مقدمة قبل بدء العمل، ويُستحق باقي المبلغ عند التسليم أو وفقًا لمراحل متفق عليها. تُحدَّد شروط الدفع لكل مشروع على حدة."},
+    "legal.terms.h4": {en:"Client Responsibilities", ar:"مسؤوليات العميل"},
+    "legal.terms.p4": {en:"Clients are responsible for providing accurate project information, timely feedback, and any content, images or brand materials needed to complete the work. Delays in providing these may affect the project timeline.", ar:"يتحمل العميل مسؤولية تقديم معلومات دقيقة عن المشروع، وملاحظات في الوقت المناسب، وأي محتوى أو صور أو مواد خاصة بالعلامة التجارية لازمة لإنجاز العمل. قد يؤثر التأخر في تقديم ذلك على الجدول الزمني للمشروع."},
+    "legal.terms.h5": {en:"Revisions", ar:"التعديلات"},
+    "legal.terms.p5": {en:"Each project includes an agreed number of revision rounds, confirmed at the quotation stage. Additional revisions beyond this may be quoted separately.", ar:"يشمل كل مشروع عددًا متفقًا عليه من جولات التعديل، يتم تأكيده في مرحلة عرض السعر. أي تعديلات إضافية بعد ذلك قد تُسعَّر بشكل منفصل."},
+    "legal.terms.h6": {en:"Timelines", ar:"الجداول الزمنية"},
+    "legal.terms.p6": {en:"Estimated timelines are provided at the start of each project. Timelines depend on the complexity of the work and on receiving client feedback and materials promptly.", ar:"تُقدَّم الجداول الزمنية التقديرية في بداية كل مشروع. تعتمد هذه الجداول على مدى تعقيد العمل وعلى استلام ملاحظات العميل والمواد اللازمة في الوقت المناسب."},
+    "legal.terms.h7": {en:"Delays", ar:"التأخيرات"},
+    "legal.terms.p7": {en:"Delays caused by late feedback, missing materials, or changes in scope may extend the agreed timeline. We will communicate any impact on delivery as early as possible.", ar:"قد تؤدي التأخيرات الناتجة عن تأخر الملاحظات أو نقص المواد أو تغيير النطاق إلى تمديد الجدول الزمني المتفق عليه. سنقوم بإبلاغك بأي تأثير على موعد التسليم في أقرب وقت ممكن."},
+    "legal.terms.h8": {en:"Intellectual Property", ar:"الملكية الفكرية"},
+    "legal.terms.p8": {en:"Ownership of final deliverables transfers to the client upon full payment, unless otherwise agreed. AVELOR retains the right to display completed work in its portfolio unless the client requests otherwise.", ar:"تنتقل ملكية المخرجات النهائية إلى العميل عند سداد كامل المبلغ، ما لم يُتفق على خلاف ذلك. تحتفظ افيلور بحق عرض الأعمال المنجزة ضمن معرض أعمالها ما لم يطلب العميل خلاف ذلك."},
+    "legal.terms.h9": {en:"Third-Party Costs", ar:"تكاليف الأطراف الثالثة"},
+    "legal.terms.p9": {en:"Costs such as domain registration, hosting, stock imagery, fonts or third-party licenses are not included in our fees unless stated in the quotation, and are billed separately or paid directly by the client.", ar:"لا تشمل رسومنا تكاليف مثل تسجيل النطاق، أو الاستضافة، أو الصور الجاهزة، أو الخطوط، أو التراخيص الخارجية، ما لم يُذكر ذلك في عرض السعر، وتُحتسب بشكل منفصل أو يدفعها العميل مباشرة."},
+    "legal.terms.h10": {en:"Cancellation", ar:"الإلغاء"},
+    "legal.terms.p10": {en:"If a project is cancelled after work has begun, the client is responsible for payment for work completed up to that point. Deposits already paid are non-refundable once work has started.", ar:"في حال إلغاء المشروع بعد بدء العمل، يتحمل العميل مسؤولية دفع قيمة العمل المُنجز حتى ذلك الوقت. الدفعات المقدمة غير قابلة للاسترداد بعد بدء العمل."},
+    "legal.terms.h11": {en:"Maintenance", ar:"الصيانة"},
+    "legal.terms.p11": {en:"AVELOR is not a subscription-based company. Website maintenance is offered as one-time support or through a custom ongoing agreement confirmed separately with the client, and is never automatically included or billed without agreement.", ar:"افيلور ليست شركة تعمل بنظام الاشتراكات. تُقدَّم صيانة المواقع كدعم لمرة واحدة أو من خلال اتفاقية مستمرة مخصصة يتم تأكيدها بشكل منفصل مع العميل، ولا تُدرج أو تُحتسب تلقائيًا دون اتفاق."},
+    "legal.terms.h12": {en:"Support After Delivery", ar:"الدعم بعد التسليم"},
+    "legal.terms.p12": {en:"Technical support and future improvements are available after delivery when required, either as a one-time paid engagement or under a separately agreed support arrangement.", ar:"الدعم الفني والتحسينات المستقبلية متاحة بعد التسليم عند الحاجة، إما كخدمة مدفوعة لمرة واحدة أو بموجب اتفاقية دعم منفصلة متفق عليها."},
+    "legal.terms.h13": {en:"Limitation of Liability", ar:"حدود المسؤولية"},
+    "legal.terms.p13": {en:"AVELOR provides services with reasonable skill and care but does not guarantee specific business outcomes such as traffic, leads, rankings or sales. Our liability for any claim is limited to the amount paid for the relevant service.", ar:"تقدم افيلور خدماتها بمهارة وعناية معقولة، لكنها لا تضمن نتائج تجارية محددة مثل الزيارات أو العملاء المحتملين أو الترتيب في محركات البحث أو المبيعات. تقتصر مسؤوليتنا عن أي مطالبة على المبلغ المدفوع مقابل الخدمة المعنية."},
+    "legal.terms.h14": {en:"Contact", ar:"التواصل"},
+    "legal.terms.p14": {en:"Questions about these Terms and Conditions can be sent to:", ar:"يمكن إرسال أي استفسارات حول هذه الشروط والأحكام إلى:"},
 
     "404.title": {en:"This page took a wrong turn", ar:"يبدو أن هذه الصفحة ضلّت الطريق"},
     "404.desc": {en:"The page you're looking for doesn't exist or may have moved. Let's get you back on track.", ar:"الصفحة التي تبحث عنها غير موجودة أو ربما تم نقلها. دعنا نعيدك إلى المسار الصحيح."},
@@ -248,10 +317,28 @@
 
   var htmlTranslations = {
     "home.hero.title": {
-      en: "We Build Digital Experiences<br>That Drive <em>Results</em>",
-      ar: "نصمم تجارب رقمية<br>تحقق <em>نتائج</em>"
+      en: "Creative Digital Solutions<br>Built to <em>Strengthen</em> Your Business",
+      ar: "حلول رقمية إبداعية<br>تساعد أعمالك على <em>النمو</em>"
+    },
+    "contact.form.consent.label": {
+      en: "I agree that my information may be used to respond to this enquiry, in line with the <a href=\"privacy.html\">Privacy Policy</a>.",
+      ar: "أوافق على استخدام معلوماتي للرد على هذا الاستفسار، وفقًا لـ<a href=\"privacy.html\">سياسة الخصوصية</a>."
     }
   };
+
+  var waMessages = {
+    en: "Hello AVELOR, I would like to discuss a project. The service I am interested in is ______.",
+    ar: "مرحباً أفيلور، أود مناقشة مشروع والاستفسار عن خدمة ______."
+  };
+
+  function updateWhatsAppLinks(lang) {
+    var msg = waMessages[lang] || waMessages.en;
+    document.querySelectorAll('a[href*="wa.me/"]').forEach(function (a) {
+      var match = a.getAttribute("href").match(/wa\.me\/(\d+)/);
+      if (!match) return;
+      a.setAttribute("href", "https://wa.me/" + match[1] + "?text=" + encodeURIComponent(msg));
+    });
+  }
 
   function currentLang() {
     return localStorage.getItem("avelor-lang") || "en";
@@ -288,6 +375,8 @@
     document.querySelectorAll(".lang-toggle .lang-option").forEach(function (opt) {
       opt.classList.toggle("is-active", opt.getAttribute("data-lang") === lang);
     });
+
+    updateWhatsAppLinks(lang);
   }
 
   function setLang(lang) {
