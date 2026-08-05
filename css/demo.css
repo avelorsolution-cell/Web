@@ -1,0 +1,2150 @@
+/* AVELOR AI website demo page — scoped styles only */
+.demo-page {
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.demo-hero {
+  min-height: 510px;
+  padding: 170px 0 95px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+  background:
+    radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.12), transparent 32%),
+    linear-gradient(145deg, #050505 0%, #0b0b0b 55%, #11100b 100%);
+}
+
+.demo-hero-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.2;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 55px 55px;
+  mask-image: linear-gradient(to bottom, #000 10%, transparent 95%);
+}
+
+.demo-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  align-items: center;
+  gap: 80px;
+}
+
+.demo-hero-copy h1 {
+  max-width: 850px;
+  font-size: clamp(42px, 6vw, 78px);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+  margin-bottom: 24px;
+}
+
+.demo-hero-copy > p {
+  max-width: 700px;
+  color: var(--gray);
+  font-size: clamp(16px, 2vw, 19px);
+}
+
+.demo-trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.demo-trust-row span {
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.025);
+  color: #d2d2d2;
+  padding: 8px 13px;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+
+.demo-hero-mark {
+  width: 220px;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(212,175,55,0.36);
+  transform: rotate(45deg);
+  box-shadow: 0 0 90px rgba(212,175,55,0.1), inset 0 0 70px rgba(212,175,55,0.04);
+}
+
+.demo-hero-mark::before,
+.demo-hero-mark::after {
+  content: '';
+  position: absolute;
+  border: 1px solid rgba(212,175,55,0.2);
+  inset: 18px;
+}
+
+.demo-hero-mark::after { inset: 42px; }
+.demo-hero-mark span {
+  transform: rotate(-45deg);
+  font-size: 68px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: -0.06em;
+}
+
+.demo-builder-section {
+  padding: 80px 0 120px;
+  background: #090909;
+}
+
+.demo-builder {
+  display: grid;
+  grid-template-columns: minmax(330px, 0.82fr) minmax(0, 1.7fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.demo-form-panel,
+.demo-preview-panel {
+  min-width: 0;
+  border: 1px solid var(--border);
+  background: #0d0d0d;
+}
+
+.demo-form-panel {
+  position: sticky;
+  top: 96px;
+  padding: 28px;
+}
+
+.demo-panel-head,
+.demo-preview-toolbar {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding-bottom: 22px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.demo-panel-head h2,
+.demo-preview-toolbar h2 {
+  font-size: 21px;
+  margin-bottom: 5px;
+}
+
+.demo-panel-head p {
+  color: var(--gray);
+  font-size: 13px;
+}
+
+.demo-step {
+  display: inline-grid;
+  place-items: center;
+  min-width: 34px;
+  height: 34px;
+  color: var(--gold);
+  border: 1px solid rgba(212,175,55,0.4);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.demo-field-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 17px 14px;
+}
+
+.demo-field {
+  min-width: 0;
+}
+
+.demo-field-full {
+  grid-column: 1 / -1;
+}
+
+.demo-field label {
+  display: block;
+  margin-bottom: 8px;
+  color: #f2f2f2;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.demo-field input,
+.demo-field select,
+.demo-field textarea {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #2c2c2c;
+  border-radius: 2px;
+  background: #121212;
+  color: var(--white);
+  padding: 12px 13px;
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.45;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.demo-field textarea {
+  resize: vertical;
+  min-height: 82px;
+}
+
+.demo-field input:focus,
+.demo-field select:focus,
+.demo-field textarea:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(212,175,55,0.08);
+  outline: none;
+}
+
+.demo-field input[aria-invalid="true"],
+.demo-field textarea[aria-invalid="true"] {
+  border-color: #d25f5f;
+}
+
+.demo-help,
+.demo-field-error {
+  display: block;
+  margin-top: 6px;
+  font-size: 10.5px;
+  color: #818181;
+}
+
+.demo-field-error {
+  color: #e28181;
+  min-height: 1em;
+}
+
+.demo-color-control {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  align-items: center;
+  gap: 10px;
+}
+
+.demo-color-control input[type="color"] {
+  width: 46px;
+  height: 42px;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.demo-color-control output {
+  border: 1px solid #2c2c2c;
+  background: #121212;
+  padding: 10px 12px;
+  color: #bdbdbd;
+  font-size: 12px;
+  direction: ltr;
+  text-align: center;
+}
+
+.demo-generate-btn {
+  position: relative;
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 23px;
+  padding: 14px 18px;
+  background: var(--gold);
+  color: #080808;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: transform .25s ease, box-shadow .25s ease, opacity .2s ease;
+}
+
+.demo-generate-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(212,175,55,0.22);
+}
+
+.demo-generate-btn:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.demo-btn-spinner {
+  display: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(0,0,0,0.25);
+  border-top-color: #000;
+  border-radius: 50%;
+  animation: demoSpin .7s linear infinite;
+}
+
+.demo-generate-btn.is-loading .demo-btn-spinner { display: block; }
+@keyframes demoSpin { to { transform: rotate(360deg); } }
+
+.demo-form-note,
+.demo-concept-disclaimer {
+  margin-top: 14px;
+  color: #7f7f7f;
+  font-size: 10.5px;
+  line-height: 1.55;
+}
+
+.demo-preview-panel {
+  padding: 24px;
+}
+
+.demo-preview-toolbar {
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+
+.demo-preview-toolbar > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.demo-preview-toolbar h2 { margin: 0; }
+
+.demo-device-switch {
+  display: inline-flex;
+  padding: 3px;
+  border: 1px solid var(--border);
+  background: #080808;
+}
+
+.demo-device-switch button {
+  min-height: 36px;
+  padding: 8px 13px;
+  color: #8e8e8e;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.demo-device-switch button.is-active {
+  background: var(--gold);
+  color: #080808;
+}
+
+.demo-status {
+  display: none;
+  margin-bottom: 14px;
+  padding: 10px 12px;
+  border: 1px solid #343434;
+  background: #111;
+  color: #c8c8c8;
+  font-size: 11.5px;
+}
+
+.demo-status.is-visible { display: block; }
+.demo-status.is-warning { border-color: rgba(212,175,55,.45); color: var(--gold-soft); }
+.demo-status.is-success { border-color: rgba(62,154,101,.45); color: #94d4ad; }
+.demo-status.is-error { border-color: rgba(210,95,95,.5); color: #e6a2a2; }
+
+.demo-device-stage {
+  min-height: 730px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 18px;
+  overflow: auto;
+  border: 1px solid #222;
+  background:
+    linear-gradient(45deg, #0b0b0b 25%, transparent 25%),
+    linear-gradient(-45deg, #0b0b0b 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #0b0b0b 75%),
+    linear-gradient(-45deg, transparent 75%, #0b0b0b 75%), #080808;
+  background-size: 22px 22px;
+  background-position: 0 0, 0 11px, 11px -11px, -11px 0;
+}
+
+.demo-browser-frame {
+  width: 100%;
+  max-width: 1060px;
+  min-width: 720px;
+  overflow: hidden;
+  border: 1px solid #363636;
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 0 25px 80px rgba(0,0,0,.45);
+  transition: width .35s ease, max-width .35s ease, min-width .35s ease;
+}
+
+.demo-device-stage.is-mobile .demo-browser-frame {
+  width: 390px;
+  min-width: 390px;
+  max-width: 390px;
+  border-radius: 22px;
+  border-width: 7px;
+  border-color: #222;
+}
+
+.demo-browser-bar {
+  height: 36px;
+  display: grid;
+  grid-template-columns: 80px 1fr 80px;
+  align-items: center;
+  padding: 0 12px;
+  background: #ececec;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.demo-browser-dots {
+  display: flex;
+  gap: 5px;
+}
+.demo-browser-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #b2b2b2;
+}
+.demo-browser-address {
+  width: min(310px, 80%);
+  margin: auto;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: #fff;
+  color: #777;
+  text-align: center;
+  font: 10px/1.2 Arial, sans-serif;
+}
+
+/* Isolate the generated concept from AVELOR's global section/card styles. */
+.construction-site,
+.construction-site * {
+  box-sizing: border-box;
+}
+
+.construction-site {
+  --demo-primary: #112c46;
+  --demo-accent: #d4af37;
+  --demo-text: #18202a;
+  --demo-muted: #6a737c;
+  position: relative;
+  overflow: hidden;
+  background: #f6f6f3;
+  color: var(--demo-text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  direction: ltr;
+}
+
+.construction-site.is-arabic {
+  direction: rtl;
+  font-family: 'Cairo', Arial, sans-serif;
+}
+
+.construction-site section,
+.construction-site header,
+.construction-site footer,
+.construction-site article,
+.construction-site nav {
+  position: relative;
+  margin: 0;
+  padding-block: 0;
+}
+
+.concept-watermark {
+  position: absolute;
+  z-index: 30;
+  top: 58px;
+  right: -42px;
+  width: 190px;
+  padding: 5px 0;
+  transform: rotate(38deg);
+  background: var(--demo-accent);
+  color: #111;
+  text-align: center;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+
+.construction-site.is-arabic .concept-watermark {
+  right: auto;
+  left: -42px;
+  transform: rotate(-38deg);
+}
+
+.construction-header {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 0 4.5% !important;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.construction-brand {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--demo-primary);
+  text-decoration: none;
+}
+
+.construction-brand-mark {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  display: grid;
+  place-items: center;
+  background: var(--demo-primary);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.construction-brand-text {
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: -.02em;
+}
+
+.construction-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  color: #57606a;
+  font-size: 10.5px;
+  font-weight: 600;
+}
+
+.construction-contact-btn,
+.construction-primary-btn,
+.construction-secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 35px;
+  padding: 8px 15px;
+  border: 1px solid transparent;
+  font-size: 9.5px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.construction-contact-btn,
+.construction-primary-btn {
+  background: var(--demo-accent);
+  color: #111;
+}
+.construction-secondary-btn {
+  border-color: rgba(255,255,255,.48);
+  color: #fff;
+}
+
+.construction-hero {
+  min-height: 390px;
+  display: flex;
+  align-items: center;
+  padding: 58px 7% !important;
+  overflow: hidden;
+  color: #fff;
+  background:
+    linear-gradient(90deg, rgba(8,21,34,.94) 0%, rgba(8,21,34,.78) 48%, rgba(8,21,34,.16) 100%),
+    url('../images/portfolio/smart_house.jpg') center 52% / cover no-repeat;
+}
+
+.construction-site.is-arabic .construction-hero {
+  background:
+    linear-gradient(-90deg, rgba(8,21,34,.94) 0%, rgba(8,21,34,.78) 48%, rgba(8,21,34,.16) 100%),
+    url('../images/portfolio/smart_house.jpg') center 52% / cover no-repeat;
+}
+
+.construction-hero-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: .22;
+  background-image:
+    linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+.construction-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 590px;
+}
+
+.construction-kicker {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: var(--demo-accent);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.construction-hero h2 {
+  max-width: 620px;
+  margin: 0 0 15px;
+  color: #fff;
+  font-family: inherit;
+  font-size: clamp(28px, 4.2vw, 53px);
+  line-height: 1.02;
+  letter-spacing: -.045em;
+}
+
+.construction-hero p {
+  max-width: 510px;
+  margin: 0;
+  color: rgba(255,255,255,.78);
+  font-size: 12px;
+}
+
+.construction-hero-actions {
+  display: flex;
+  gap: 9px;
+  margin-top: 24px;
+}
+
+.construction-hero-stat {
+  position: absolute;
+  z-index: 2;
+  right: 4.5%;
+  bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 14px;
+  border-left: 2px solid var(--demo-accent);
+}
+.construction-site.is-arabic .construction-hero-stat {
+  right: auto;
+  left: 4.5%;
+  padding-left: 0;
+  padding-right: 14px;
+  border-left: 0;
+  border-right: 2px solid var(--demo-accent);
+}
+.construction-hero-stat strong { color: #fff; font-size: 13px; }
+.construction-hero-stat span { color: rgba(255,255,255,.65); font-size: 8.5px; }
+
+.construction-section-label {
+  color: var(--demo-accent);
+  font-size: 8.5px;
+  font-weight: 800;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.construction-about {
+  display: grid;
+  grid-template-columns: .6fr 1.35fr 1.2fr;
+  gap: 35px;
+  padding: 58px 6% !important;
+  background: #fff;
+}
+
+.construction-about h3,
+.construction-section-heading h3,
+.construction-cta h3 {
+  margin: 0 0 10px;
+  color: var(--demo-primary);
+  font-family: inherit;
+  font-size: 25px;
+  line-height: 1.12;
+  letter-spacing: -.03em;
+}
+
+.construction-about p,
+.construction-cta p {
+  margin: 0;
+  color: var(--demo-muted);
+  font-size: 10.5px;
+}
+
+.construction-values {
+  display: grid;
+  gap: 13px;
+}
+.construction-values div {
+  padding-bottom: 11px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.construction-values strong,
+.construction-values span {
+  display: block;
+}
+.construction-values strong {
+  margin-bottom: 3px;
+  color: var(--demo-primary);
+  font-size: 10.5px;
+}
+.construction-values span {
+  color: var(--demo-muted);
+  font-size: 8.5px;
+}
+
+.construction-services-section {
+  padding: 58px 6% !important;
+  background: #eef0ef;
+}
+.construction-section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 28px;
+}
+.construction-section-heading h3 { margin: 0; }
+
+.construction-service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.construction-service-grid article {
+  min-height: 170px;
+  padding: 20px !important;
+  background: #fff;
+  border-top: 3px solid var(--demo-primary);
+}
+.construction-service-grid article > span {
+  display: block;
+  margin-bottom: 30px;
+  color: var(--demo-accent);
+  font-size: 9px;
+  font-weight: 700;
+}
+.construction-service-grid h4 {
+  margin: 0 0 8px;
+  color: var(--demo-primary);
+  font-family: inherit;
+  font-size: 14px;
+}
+.construction-service-grid p {
+  margin: 0;
+  color: var(--demo-muted);
+  font-size: 9px;
+}
+
+.construction-projects {
+  padding: 58px 6% !important;
+  background: var(--demo-primary);
+  color: #fff;
+}
+.construction-projects .construction-section-heading h3 { color: #fff; }
+.construction-project-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr 1fr;
+  gap: 10px;
+}
+.construction-project {
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 18px !important;
+  overflow: hidden;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+}
+.construction-project::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 35%, rgba(0,0,0,.78));
+}
+.construction-project span,
+.construction-project strong { position: relative; z-index: 1; }
+.construction-project span { color: var(--demo-accent); font-size: 8px; text-transform: uppercase; letter-spacing: .1em; }
+.construction-project strong { margin-top: 3px; font-size: 13px; }
+.project-one { background-image: url('../images/portfolio/house.jpg'); }
+.project-two { background-image: url('../images/portfolio/smart_house.jpg'); }
+.project-three { background-image: url('../images/portfolio/cafe_3d_02.jpg'); }
+
+.construction-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 44px 6% !important;
+  background: #fff;
+}
+.construction-cta h3 { margin-top: 8px; }
+
+.construction-footer {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 0 6% !important;
+  background: #0d1823;
+  color: rgba(255,255,255,.62);
+  font-size: 8.5px;
+}
+.construction-footer strong {
+  margin-right: auto;
+  color: #fff;
+  font-size: 10.5px;
+}
+.construction-site.is-arabic .construction-footer strong {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.demo-device-stage.is-mobile .construction-header {
+  min-height: 58px;
+  padding: 0 18px !important;
+}
+.demo-device-stage.is-mobile .construction-brand-text { max-width: 150px; font-size: 12px; }
+.demo-device-stage.is-mobile .construction-nav,
+.demo-device-stage.is-mobile .construction-contact-btn { display: none; }
+.demo-device-stage.is-mobile .construction-hero {
+  min-height: 410px;
+  padding: 65px 24px 45px !important;
+  align-items: flex-end;
+  background:
+    linear-gradient(0deg, rgba(8,21,34,.96) 0%, rgba(8,21,34,.42) 75%),
+    url('../images/portfolio/smart_house.jpg') center / cover no-repeat;
+}
+.demo-device-stage.is-mobile .construction-hero h2 { font-size: 34px; }
+.demo-device-stage.is-mobile .construction-hero-stat { display: none; }
+.demo-device-stage.is-mobile .construction-about {
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 42px 24px !important;
+}
+.demo-device-stage.is-mobile .construction-services-section,
+.demo-device-stage.is-mobile .construction-projects {
+  padding: 42px 24px !important;
+}
+.demo-device-stage.is-mobile .construction-section-heading { display: block; }
+.demo-device-stage.is-mobile .construction-section-heading h3 { margin-top: 9px; }
+.demo-device-stage.is-mobile .construction-service-grid,
+.demo-device-stage.is-mobile .construction-project-grid {
+  grid-template-columns: 1fr;
+}
+.demo-device-stage.is-mobile .construction-service-grid article { min-height: 150px; }
+.demo-device-stage.is-mobile .construction-project { min-height: 230px; }
+.demo-device-stage.is-mobile .construction-cta {
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 40px 24px !important;
+}
+.demo-device-stage.is-mobile .construction-footer {
+  min-height: 100px;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+  padding: 20px 24px !important;
+}
+.demo-device-stage.is-mobile .construction-footer strong { margin: 0 0 4px; }
+
+.demo-preview-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+.demo-preview-actions .btn { min-height: 43px; }
+
+html[dir="rtl"] .demo-form-panel,
+html[dir="rtl"] .demo-preview-panel,
+html[dir="rtl"] .demo-field input,
+html[dir="rtl"] .demo-field textarea,
+html[dir="rtl"] .demo-field select {
+  text-align: right;
+}
+html[dir="rtl"] .demo-color-control output { text-align: center; }
+html[dir="rtl"] .demo-device-switch,
+html[dir="rtl"] .demo-preview-actions { direction: rtl; }
+
+@media (max-width: 1080px) {
+  .demo-builder { grid-template-columns: 1fr; }
+  .demo-form-panel { position: static; }
+  .demo-device-stage { min-height: 650px; }
+}
+
+@media (max-width: 900px) {
+  .demo-hero { min-height: auto; padding: 145px 0 75px; }
+  .demo-hero-inner { grid-template-columns: 1fr; }
+  .demo-hero-mark { display: none; }
+  .demo-builder-section { padding-top: 55px; }
+}
+
+@media (max-width: 680px) {
+  .demo-hero-copy h1 { font-size: 43px; }
+  .demo-builder-section { padding-bottom: 80px; }
+  .demo-form-panel,
+  .demo-preview-panel { padding: 18px; }
+  .demo-field-grid { grid-template-columns: 1fr; }
+  .demo-field-full { grid-column: auto; }
+  .demo-preview-toolbar { align-items: flex-start; flex-direction: column; }
+  .demo-device-stage { min-height: 600px; padding: 10px; }
+  .demo-browser-frame {
+    min-width: 690px;
+  }
+  .demo-device-stage.is-mobile .demo-browser-frame {
+    width: 350px;
+    min-width: 350px;
+    max-width: 350px;
+  }
+  .demo-preview-actions { justify-content: stretch; }
+  .demo-preview-actions .btn { flex: 1 1 100%; }
+}
+
+@media (max-width: 410px) {
+  .demo-device-stage.is-mobile .demo-browser-frame {
+    width: 316px;
+    min-width: 316px;
+    max-width: 316px;
+  }
+}
+
+/* =========================================================
+   21 DISTINCT INDUSTRY TEMPLATE APPEARANCES
+   The same safe content fields are arranged and styled in
+   clearly different ways for each selected business sector.
+   ========================================================= */
+
+.demo-template-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.demo-template-label-row label { margin-bottom: 0; }
+.demo-template-count {
+  min-width: 28px;
+  height: 28px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid rgba(212,175,55,.45);
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+/* 01 — Construction: angular, industrial and strong. */
+.template-construction .construction-header { border-bottom: 3px solid var(--demo-accent); }
+.template-construction .construction-service-grid article { clip-path: polygon(0 0, 96% 0, 100% 14%, 100% 100%, 0 100%); }
+.template-construction .construction-primary-btn,
+.template-construction .construction-contact-btn { border-radius: 0; }
+
+/* 02 — Real Estate: luxury editorial layout. */
+.template-realestate {
+  --demo-text: #202824;
+  --demo-muted: #68716c;
+  background: #f5f2eb;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+.template-realestate .construction-header { background: rgba(255,255,255,.94); min-height: 78px; }
+.template-realestate .construction-brand-mark { border-radius: 50%; background: transparent; border: 1px solid var(--demo-accent); color: var(--demo-primary); }
+.template-realestate .construction-nav { font-family: Arial, sans-serif; letter-spacing: .05em; }
+.template-realestate .construction-contact-btn,
+.template-realestate .construction-primary-btn { border-radius: 999px; }
+.template-realestate .construction-hero {
+  min-height: 500px;
+  align-items: flex-end;
+  padding-bottom: 66px !important;
+  background:
+    linear-gradient(0deg, rgba(16,28,23,.86), rgba(16,28,23,.08) 72%),
+    url('../images/portfolio/house.jpg') center / cover no-repeat;
+}
+.template-realestate .construction-hero-content { max-width: 720px; }
+.template-realestate .construction-hero h2 { font-size: clamp(38px,5.3vw,66px); font-weight: 500; }
+.template-realestate .construction-hero-stat { right: 6%; top: 55px; bottom: auto; padding: 15px 20px; border: 1px solid rgba(255,255,255,.35); background: rgba(8,20,15,.35); backdrop-filter: blur(8px); }
+.template-realestate .construction-about { grid-template-columns: .7fr 1.6fr 1fr; padding-block: 76px !important; background: #f5f2eb; }
+.template-realestate .construction-about h3,
+.template-realestate .construction-section-heading h3,
+.template-realestate .construction-cta h3 { font-weight: 500; font-size: 31px; }
+.template-realestate .construction-services-section { background: #fff; }
+.template-realestate .construction-service-grid article { border: 1px solid #ddd8cd; border-top: 1px solid #ddd8cd; background: #fbfaf7; }
+.template-realestate .construction-projects { background: #1c2b25; }
+.template-realestate .construction-project-grid { grid-template-columns: 1fr 1.35fr 1fr; }
+.template-realestate .construction-project { min-height: 245px; }
+
+/* 03 — Restaurant & Café: warm, rounded and editorial. */
+.template-restaurant {
+  --demo-text: #3b241a;
+  --demo-muted: #836c60;
+  background: #fff7ed;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+.template-restaurant .construction-header { background: #fff8ef; border-bottom: 0; }
+.template-restaurant .construction-brand-mark { border-radius: 50%; }
+.template-restaurant .construction-contact-btn,
+.template-restaurant .construction-primary-btn,
+.template-restaurant .construction-secondary-btn { border-radius: 999px; }
+.template-restaurant .construction-hero {
+  min-height: 470px;
+  justify-content: center;
+  text-align: center;
+  background:
+    linear-gradient(rgba(54,25,15,.58), rgba(54,25,15,.72)),
+    url('../images/portfolio/cafe_3d_03.jpg') center / cover no-repeat;
+}
+.template-restaurant .construction-hero-content { max-width: 680px; }
+.template-restaurant .construction-hero-actions { justify-content: center; }
+.template-restaurant .construction-hero-stat { display: none; }
+.template-restaurant .construction-kicker { padding: 7px 14px; border: 1px solid rgba(255,255,255,.4); border-radius: 999px; color: #fff; }
+.template-restaurant .construction-about { grid-template-columns: .65fr 1.55fr 1fr; background: #fff8ef; }
+.template-restaurant .construction-values div { border-color: #ead9c9; }
+.template-restaurant .construction-services-section { background: #4a2318; }
+.template-restaurant .construction-services-section h3 { color: #fff; }
+.template-restaurant .construction-service-grid article { border: 0; border-radius: 18px; background: #fff8ef; }
+.template-restaurant .construction-projects { background: #fff8ef; color: var(--demo-text); }
+.template-restaurant .construction-projects .construction-section-heading h3 { color: var(--demo-primary); }
+.template-restaurant .construction-project { border-radius: 18px; }
+.template-restaurant .construction-cta { background: var(--demo-accent); }
+
+/* 04 — Medical Clinic: crisp, calm and clinical. */
+.template-clinic {
+  --demo-text: #13343b;
+  --demo-muted: #688189;
+  background: #f2fafb;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.template-clinic .construction-header { min-height: 76px; background: #fff; box-shadow: 0 5px 22px rgba(13,82,94,.07); border: 0; }
+.template-clinic .construction-brand-mark { border-radius: 12px; }
+.template-clinic .construction-contact-btn,
+.template-clinic .construction-primary-btn { border-radius: 10px; }
+.template-clinic .construction-secondary-btn { border-radius: 10px; }
+.template-clinic .construction-hero {
+  min-height: 410px;
+  color: var(--demo-text);
+  background:
+    radial-gradient(circle at 76% 36%, rgba(66,185,177,.32), transparent 20%),
+    linear-gradient(120deg, #ecfbfc 0%, #f9ffff 58%, #d9f2f2 100%);
+}
+.template-clinic .construction-hero h2 { color: var(--demo-primary); max-width: 570px; }
+.template-clinic .construction-hero p { color: #4f7077; }
+.template-clinic .construction-secondary-btn { color: var(--demo-primary); border-color: rgba(12,96,112,.3); }
+.template-clinic .construction-hero-overlay { opacity: .18; background-size: 28px 28px; }
+.template-clinic .construction-hero-stat { right: 7%; bottom: 80px; border: 0; border-radius: 18px; padding: 22px; background: #fff; box-shadow: 0 18px 45px rgba(12,96,112,.14); }
+.template-clinic .construction-hero-stat strong { color: var(--demo-primary); }
+.template-clinic .construction-hero-stat span { color: var(--demo-muted); }
+.template-clinic .construction-about { background: #fff; }
+.template-clinic .construction-values div { padding: 13px; border: 1px solid #dceff0; border-radius: 10px; }
+.template-clinic .construction-services-section { background: #f1f9fa; }
+.template-clinic .construction-service-grid article { border: 1px solid #d9ecee; border-radius: 14px; border-top: 1px solid #d9ecee; box-shadow: 0 12px 30px rgba(12,96,112,.06); }
+.template-clinic .construction-projects { background: #0d5b69; }
+.template-clinic .construction-project { border-radius: 14px; }
+.template-clinic .construction-cta { background: #e2f6f6; }
+
+/* 05 — Interior Design: gallery-led minimalist composition. */
+.template-interior {
+  --demo-text: #24231f;
+  --demo-muted: #77736b;
+  background: #f4f1e9;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+.template-interior .construction-header { min-height: 84px; background: #f4f1e9; border: 0; }
+.template-interior .construction-brand-mark { background: transparent; color: var(--demo-primary); border: 1px solid var(--demo-primary); }
+.template-interior .construction-contact-btn { background: transparent; border: 1px solid var(--demo-primary); color: var(--demo-primary); }
+.template-interior .construction-hero {
+  min-height: 540px;
+  align-items: flex-end;
+  padding: 70px 7% !important;
+  background:
+    linear-gradient(0deg, rgba(20,19,16,.72), transparent 72%),
+    url('../images/portfolio/cafe_3d_01.jpg') center / cover no-repeat;
+}
+.template-interior .construction-hero-content { max-width: 760px; }
+.template-interior .construction-hero h2 { font-size: clamp(42px,6vw,72px); font-weight: 400; }
+.template-interior .construction-hero-stat { display: none; }
+.template-interior .construction-primary-btn { background: #fff; color: #211f1a; }
+.template-interior .construction-about { grid-template-columns: .5fr 1.7fr .85fr; padding-block: 84px !important; background: #f4f1e9; }
+.template-interior .construction-about h3,
+.template-interior .construction-section-heading h3,
+.template-interior .construction-cta h3 { font-weight: 400; font-size: 34px; }
+.template-interior .construction-services-section { background: #ded8cc; }
+.template-interior .construction-service-grid { gap: 1px; background: #c4bbaa; }
+.template-interior .construction-service-grid article { border: 0; background: #f4f1e9; }
+.template-interior .construction-projects { background: #24231f; }
+.template-interior .construction-project-grid { grid-template-columns: 1.65fr .8fr .8fr; }
+.template-interior .construction-project:first-child { min-height: 310px; }
+.template-interior .construction-cta { background: #f4f1e9; }
+
+/* 06 — Fitness & Gym: high-energy dark performance theme. */
+.template-fitness {
+  --demo-text: #f5f5f5;
+  --demo-muted: #b3b3b3;
+  background: #0d0d0d;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: none;
+}
+.template-fitness .construction-header { background: #0b0b0b; border-bottom: 1px solid #292929; }
+.template-fitness .construction-brand-text,
+.template-fitness .construction-nav { color: #fff; }
+.template-fitness .construction-brand-mark { transform: skew(-7deg); color: #111; background: var(--demo-accent); }
+.template-fitness .construction-contact-btn,
+.template-fitness .construction-primary-btn { transform: skew(-7deg); }
+.template-fitness .construction-hero {
+  min-height: 470px;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.95), rgba(0,0,0,.35)),
+    radial-gradient(circle at 78% 45%, rgba(217,255,63,.25), transparent 24%),
+    #111;
+}
+.template-fitness .construction-hero h2 { font-size: clamp(42px,6vw,72px); text-transform: uppercase; font-style: italic; line-height: .92; }
+.template-fitness .construction-hero-stat { border-color: var(--demo-accent); }
+.template-fitness .construction-about { background: #141414; }
+.template-fitness .construction-about h3,
+.template-fitness .construction-section-heading h3,
+.template-fitness .construction-cta h3,
+.template-fitness .construction-values strong { color: #fff; }
+.template-fitness .construction-values div { border-color: #333; }
+.template-fitness .construction-services-section { background: #0a0a0a; }
+.template-fitness .construction-service-grid article { background: #181818; border-top: 4px solid var(--demo-accent); }
+.template-fitness .construction-service-grid h4 { color: #fff; text-transform: uppercase; }
+.template-fitness .construction-projects { background: #151515; }
+.template-fitness .construction-project { filter: grayscale(1) contrast(1.1); }
+.template-fitness .construction-cta { background: var(--demo-accent); color: #111; }
+.template-fitness .construction-cta h3,
+.template-fitness .construction-cta p { color: #111; }
+.template-fitness .construction-cta .construction-primary-btn { background: #111; color: #fff; }
+.template-fitness .construction-footer { background: #050505; }
+
+/* 07 — Cleaning & Maintenance: bright, friendly service theme. */
+.template-cleaning {
+  --demo-text: #123c43;
+  --demo-muted: #5f7e83;
+  background: #effbfc;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.template-cleaning .construction-header { background: #fff; border-bottom: 0; }
+.template-cleaning .construction-brand-mark,
+.template-cleaning .construction-contact-btn,
+.template-cleaning .construction-primary-btn,
+.template-cleaning .construction-secondary-btn { border-radius: 12px; }
+.template-cleaning .construction-hero {
+  min-height: 430px;
+  color: var(--demo-text);
+  background:
+    radial-gradient(circle at 78% 30%, rgba(99,213,207,.45), transparent 19%),
+    radial-gradient(circle at 67% 59%, rgba(255,255,255,.9), transparent 10%),
+    linear-gradient(135deg, #e6fbfc 0%, #fbffff 52%, #c5f2ef 100%);
+}
+.template-cleaning .construction-hero h2 { color: var(--demo-primary); }
+.template-cleaning .construction-hero p { color: #54777c; }
+.template-cleaning .construction-secondary-btn { color: var(--demo-primary); border-color: rgba(20,107,122,.35); }
+.template-cleaning .construction-hero-stat { border: 0; border-radius: 20px; background: #fff; padding: 18px 22px; box-shadow: 0 15px 35px rgba(20,107,122,.12); }
+.template-cleaning .construction-hero-stat strong { color: var(--demo-primary); }
+.template-cleaning .construction-hero-stat span { color: var(--demo-muted); }
+.template-cleaning .construction-about { background: #fff; }
+.template-cleaning .construction-values { grid-template-columns: repeat(3,1fr); }
+.template-cleaning .construction-values div { padding: 14px; border: 1px solid #d3eeee; border-radius: 12px; }
+.template-cleaning .construction-services-section { background: #e7f7f8; }
+.template-cleaning .construction-service-grid article { border: 0; border-radius: 20px; box-shadow: 0 12px 30px rgba(20,107,122,.08); }
+.template-cleaning .construction-projects { background: #146b7a; }
+.template-cleaning .construction-project { border-radius: 20px; }
+.template-cleaning .construction-cta { background: #c9f1ef; }
+
+/* 08 — Automotive: red/black technical performance theme. */
+.template-automotive {
+  --demo-text: #f2f2f2;
+  --demo-muted: #aaa;
+  background: #111;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.template-automotive .construction-header { background: #101114; border-bottom: 3px solid var(--demo-accent); }
+.template-automotive .construction-brand-text,
+.template-automotive .construction-nav { color: #fff; }
+.template-automotive .construction-brand-mark { clip-path: polygon(12% 0,100% 0,88% 100%,0 100%); }
+.template-automotive .construction-contact-btn,
+.template-automotive .construction-primary-btn { clip-path: polygon(8% 0,100% 0,92% 100%,0 100%); padding-inline: 22px; }
+.template-automotive .construction-hero {
+  min-height: 460px;
+  background:
+    linear-gradient(110deg, rgba(7,8,10,.98) 0%, rgba(7,8,10,.8) 55%, rgba(227,55,50,.25) 100%),
+    repeating-linear-gradient(135deg, transparent 0 34px, rgba(255,255,255,.025) 34px 36px),
+    #17191c;
+}
+.template-automotive .construction-hero h2 { text-transform: uppercase; font-style: italic; font-size: clamp(38px,5.5vw,68px); }
+.template-automotive .construction-hero-stat { border-left-width: 5px; }
+.template-automotive .construction-about { background: #17191c; }
+.template-automotive .construction-about h3,
+.template-automotive .construction-section-heading h3,
+.template-automotive .construction-cta h3,
+.template-automotive .construction-values strong { color: #fff; }
+.template-automotive .construction-values div { border-color: #343434; }
+.template-automotive .construction-services-section { background: #0e0f11; }
+.template-automotive .construction-service-grid article { background: #1a1b1e; border-top: 4px solid var(--demo-accent); }
+.template-automotive .construction-service-grid h4 { color: #fff; text-transform: uppercase; }
+.template-automotive .construction-projects { background: #18191c; }
+.template-automotive .construction-project-grid { grid-template-columns: 1fr 1fr 1fr; }
+.template-automotive .construction-project { clip-path: polygon(0 0,94% 0,100% 15%,100% 100%,6% 100%,0 85%); }
+.template-automotive .construction-cta { background: var(--demo-accent); }
+.template-automotive .construction-cta h3,
+.template-automotive .construction-cta p { color: #111; }
+.template-automotive .construction-cta .construction-primary-btn { background: #111; color: #fff; }
+.template-automotive .construction-footer { background: #08090a; }
+
+/* 09 — Beauty & Spa: soft, graceful and luxurious. */
+.template-beauty {
+  --demo-text: #523f45;
+  --demo-muted: #8d777e;
+  background: #fbf4f3;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+.template-beauty .construction-header { min-height: 82px; background: rgba(255,250,249,.96); border: 0; }
+.template-beauty .construction-brand-mark { border-radius: 50%; background: transparent; border: 1px solid var(--demo-primary); color: var(--demo-primary); }
+.template-beauty .construction-contact-btn,
+.template-beauty .construction-primary-btn,
+.template-beauty .construction-secondary-btn { border-radius: 999px; }
+.template-beauty .construction-hero {
+  min-height: 500px;
+  justify-content: center;
+  text-align: center;
+  background:
+    linear-gradient(rgba(79,55,62,.45), rgba(79,55,62,.55)),
+    url('../images/portfolio/cafe_3d_02.jpg') center / cover no-repeat;
+}
+.template-beauty .construction-hero-content { max-width: 700px; }
+.template-beauty .construction-hero-actions { justify-content: center; }
+.template-beauty .construction-hero h2 { font-size: clamp(40px,5.6vw,67px); font-weight: 400; }
+.template-beauty .construction-hero-stat { display: none; }
+.template-beauty .construction-about { grid-template-columns: .6fr 1.5fr 1fr; background: #fbf4f3; }
+.template-beauty .construction-about h3,
+.template-beauty .construction-section-heading h3,
+.template-beauty .construction-cta h3 { font-weight: 400; font-size: 32px; }
+.template-beauty .construction-values div { border-color: #ead8d8; }
+.template-beauty .construction-services-section { background: #f1e1e0; }
+.template-beauty .construction-service-grid article { border: 0; border-radius: 999px 999px 24px 24px; text-align: center; padding-top: 35px !important; }
+.template-beauty .construction-projects { background: #5d454b; }
+.template-beauty .construction-project { border-radius: 160px 160px 20px 20px; min-height: 250px; }
+.template-beauty .construction-cta { background: #fbf4f3; }
+
+/* 10 — Professional Consulting: precise corporate grid. */
+.template-consulting {
+  --demo-text: #182943;
+  --demo-muted: #66768e;
+  background: #f4f7fb;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.template-consulting .construction-header { min-height: 74px; background: #fff; border-bottom: 1px solid #dce3ec; }
+.template-consulting .construction-brand-mark { border-radius: 3px; }
+.template-consulting .construction-contact-btn,
+.template-consulting .construction-primary-btn { border-radius: 3px; }
+.template-consulting .construction-hero {
+  min-height: 440px;
+  background:
+    linear-gradient(105deg, rgba(23,42,73,.98) 0%, rgba(23,42,73,.9) 60%, rgba(78,163,200,.42) 100%),
+    repeating-linear-gradient(90deg, transparent 0 79px, rgba(255,255,255,.04) 79px 80px),
+    #172a49;
+}
+.template-consulting .construction-hero-content { max-width: 650px; }
+.template-consulting .construction-hero-stat { padding: 20px; border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.06); }
+.template-consulting .construction-about { grid-template-columns: .55fr 1.4fr 1.2fr; background: #fff; }
+.template-consulting .construction-values { grid-template-columns: 1fr; }
+.template-consulting .construction-values div { padding: 13px 16px; border: 1px solid #dce3ec; }
+.template-consulting .construction-services-section { background: #edf2f7; }
+.template-consulting .construction-service-grid article { border: 1px solid #d8e0e9; border-left: 4px solid var(--demo-accent); border-top: 1px solid #d8e0e9; }
+.template-consulting .construction-projects { background: #172a49; }
+.template-consulting .construction-project-grid { grid-template-columns: repeat(3,1fr); }
+.template-consulting .construction-project { min-height: 210px; }
+.template-consulting .construction-cta { background: #fff; border-top: 1px solid #dce3ec; }
+
+/* 11 — E-commerce & Retail: product-led storefront. */
+.template-ecommerce {
+  --demo-text: #22232a;
+  --demo-muted: #70727d;
+  background: #f7f7fa;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.template-ecommerce .construction-header { min-height: 72px; background: #fff; border-bottom: 1px solid #ececf0; }
+.template-ecommerce .construction-brand-mark { border-radius: 8px; }
+.template-ecommerce .construction-contact-btn,
+.template-ecommerce .construction-primary-btn { border-radius: 8px; }
+.template-ecommerce .construction-hero {
+  min-height: 440px;
+  color: var(--demo-text);
+  background:
+    radial-gradient(circle at 77% 47%, rgba(255,179,71,.68), transparent 23%),
+    radial-gradient(circle at 72% 43%, rgba(255,255,255,.94), transparent 12%),
+    linear-gradient(125deg, #f5f3ed 0%, #fff 55%, #ece9df 100%);
+}
+.template-ecommerce .construction-hero h2 { color: var(--demo-primary); max-width: 560px; }
+.template-ecommerce .construction-hero p { color: #666974; }
+.template-ecommerce .construction-secondary-btn { color: var(--demo-primary); border-color: #b8b8c0; }
+.template-ecommerce .construction-hero-stat { border: 0; border-radius: 14px; background: #fff; padding: 20px; box-shadow: 0 18px 45px rgba(34,35,42,.14); }
+.template-ecommerce .construction-hero-stat strong { color: var(--demo-primary); }
+.template-ecommerce .construction-hero-stat span { color: var(--demo-muted); }
+.template-ecommerce .construction-about { background: #fff; }
+.template-ecommerce .construction-values { grid-template-columns: repeat(3,1fr); }
+.template-ecommerce .construction-values div { border: 1px solid #e6e6ea; border-radius: 10px; padding: 14px; }
+.template-ecommerce .construction-services-section { background: #f4f4f7; }
+.template-ecommerce .construction-service-grid article { border: 1px solid #e4e4e9; border-radius: 12px; border-top: 1px solid #e4e4e9; }
+.template-ecommerce .construction-projects { background: #fff; color: var(--demo-text); }
+.template-ecommerce .construction-projects .construction-section-heading h3 { color: var(--demo-primary); }
+.template-ecommerce .construction-project-grid { grid-template-columns: repeat(3,1fr); }
+.template-ecommerce .construction-project { min-height: 270px; border-radius: 14px; box-shadow: 0 12px 30px rgba(34,35,42,.1); }
+.template-ecommerce .construction-cta { margin: 0 6% 56px !important; border-radius: 16px; background: var(--demo-primary); }
+.template-ecommerce .construction-cta h3 { color: #fff; }
+.template-ecommerce .construction-cta p { color: rgba(255,255,255,.7); }
+
+/* Arabic position adjustments shared by template-specific cards. */
+.construction-site.is-arabic.template-realestate .construction-hero-stat,
+.construction-site.is-arabic.template-clinic .construction-hero-stat,
+.construction-site.is-arabic.template-cleaning .construction-hero-stat,
+.construction-site.is-arabic.template-ecommerce .construction-hero-stat {
+  right: auto;
+  left: 6%;
+}
+
+/* Keep all variants readable in phone preview. */
+.demo-device-stage.is-mobile .template-realestate .construction-hero,
+.demo-device-stage.is-mobile .template-restaurant .construction-hero,
+.demo-device-stage.is-mobile .template-interior .construction-hero,
+.demo-device-stage.is-mobile .template-beauty .construction-hero {
+  min-height: 470px;
+  text-align: left;
+  justify-content: flex-start;
+}
+.demo-device-stage.is-mobile .construction-site.is-arabic.template-realestate .construction-hero,
+.demo-device-stage.is-mobile .construction-site.is-arabic.template-restaurant .construction-hero,
+.demo-device-stage.is-mobile .construction-site.is-arabic.template-interior .construction-hero,
+.demo-device-stage.is-mobile .construction-site.is-arabic.template-beauty .construction-hero { text-align: right; }
+.demo-device-stage.is-mobile .template-restaurant .construction-hero-actions,
+.demo-device-stage.is-mobile .template-beauty .construction-hero-actions { justify-content: flex-start; }
+.demo-device-stage.is-mobile .construction-site.is-arabic.template-restaurant .construction-hero-actions,
+.demo-device-stage.is-mobile .construction-site.is-arabic.template-beauty .construction-hero-actions { justify-content: flex-start; }
+.demo-device-stage.is-mobile .template-cleaning .construction-values,
+.demo-device-stage.is-mobile .template-ecommerce .construction-values { grid-template-columns: 1fr; }
+.demo-device-stage.is-mobile .template-interior .construction-project-grid,
+.demo-device-stage.is-mobile .template-realestate .construction-project-grid,
+.demo-device-stage.is-mobile .template-consulting .construction-project-grid,
+.demo-device-stage.is-mobile .template-ecommerce .construction-project-grid { grid-template-columns: 1fr; }
+.demo-device-stage.is-mobile .template-ecommerce .construction-cta { margin: 0 18px 35px !important; }
+
+
+/* =========================================================
+   AVELOR AI DEMO — VISUAL POLISH V2
+   Better template selection cards and safer industry visuals.
+   ========================================================= */
+
+/* Template selector: each option now looks like a real miniature website. */
+.demo-template-help {
+  margin-bottom: 12px;
+}
+
+.demo-template-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  max-height: 430px;
+  padding: 2px 5px 2px 2px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #4a4230 #111;
+}
+
+.demo-template-grid::-webkit-scrollbar { width: 7px; }
+.demo-template-grid::-webkit-scrollbar-track { background: #111; }
+.demo-template-grid::-webkit-scrollbar-thumb { background: #4a4230; border-radius: 99px; }
+
+.demo-template-card {
+  --thumb-bg: #172b3d;
+  --thumb-surface: rgba(255,255,255,.95);
+  --thumb-accent: #d4af37;
+  --thumb-ink: #172b3d;
+  position: relative;
+  min-width: 0;
+  display: grid;
+  grid-template-rows: 76px auto;
+  gap: 10px;
+  padding: 9px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #292929;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #151515, #101010);
+  cursor: pointer;
+  transition: transform .2s ease, border-color .2s ease, background .2s ease, box-shadow .2s ease;
+}
+
+.demo-template-card:hover {
+  transform: translateY(-2px);
+  border-color: #59513d;
+  background: #171717;
+}
+
+.demo-template-card.is-selected {
+  border-color: var(--gold);
+  background: linear-gradient(180deg, rgba(212,175,55,.11), #111 60%);
+  box-shadow: 0 0 0 1px rgba(212,175,55,.14), 0 10px 24px rgba(0,0,0,.28);
+}
+
+.demo-template-card input {
+  position: absolute !important;
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+.demo-template-visual {
+  position: relative;
+  display: block;
+  min-width: 0;
+  height: 76px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 7px;
+  background: var(--thumb-bg);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.08);
+}
+
+.demo-mini-nav,
+.demo-mini-title,
+.demo-mini-line,
+.demo-mini-card-one,
+.demo-mini-card-two {
+  position: absolute;
+  display: block;
+}
+
+.demo-mini-nav {
+  top: 7px;
+  left: 8px;
+  right: 8px;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255,255,255,.88);
+}
+
+.demo-mini-nav::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: 3px;
+  width: 18px;
+  height: 2px;
+  background: var(--thumb-accent);
+  box-shadow: -23px 0 rgba(255,255,255,.38);
+}
+
+.demo-mini-title {
+  top: 25px;
+  left: 10px;
+  width: 52%;
+  height: 7px;
+  background: var(--thumb-surface);
+  border-radius: 2px;
+}
+
+.demo-mini-line {
+  top: 37px;
+  left: 10px;
+  width: 39%;
+  height: 3px;
+  background: rgba(255,255,255,.45);
+  border-radius: 2px;
+}
+
+.demo-mini-card-one,
+.demo-mini-card-two {
+  bottom: 8px;
+  width: 29%;
+  height: 19px;
+  border-radius: 3px;
+  background: var(--thumb-surface);
+  box-shadow: inset 0 3px var(--thumb-accent);
+}
+.demo-mini-card-one { left: 10px; }
+.demo-mini-card-two { left: 43%; }
+
+.demo-template-copy {
+  min-width: 0;
+  display: block;
+  padding-right: 22px;
+}
+
+.demo-template-copy strong,
+.demo-template-copy small {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.demo-template-copy strong {
+  color: #f2f2f2;
+  font-size: 11px;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.demo-template-copy small {
+  margin-top: 3px;
+  color: #858585;
+  font-size: 9px;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.demo-template-selected {
+  position: absolute;
+  right: 9px;
+  bottom: 10px;
+  width: 18px;
+  height: 18px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #454545;
+  border-radius: 50%;
+  color: transparent;
+  background: #171717;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.demo-template-card.is-selected .demo-template-selected {
+  border-color: var(--gold);
+  background: var(--gold);
+  color: #111;
+}
+
+/* Miniature visual identities. */
+.demo-template-card--construction { --thumb-bg: linear-gradient(135deg,#0d2135 0 67%,#c5a03c 67%); --thumb-accent:#d4af37; }
+.demo-template-card--construction .demo-template-visual { border-radius: 2px; }
+.demo-template-card--construction .demo-mini-card-two { clip-path: polygon(0 0,88% 0,100% 30%,100% 100%,0 100%); }
+
+.demo-template-card--realestate { --thumb-bg: linear-gradient(145deg,#f0ebe0 0 58%,#21322b 58%); --thumb-surface:#20312a; --thumb-accent:#c6a86a; }
+.demo-template-card--realestate .demo-mini-nav { background:#fff; }
+.demo-template-card--realestate .demo-mini-title { width:42%; background:#20312a; }
+.demo-template-card--realestate .demo-mini-line { background:#86775e; }
+.demo-template-card--realestate .demo-mini-card-one,
+.demo-template-card--realestate .demo-mini-card-two { border-radius:0; }
+
+.demo-template-card--restaurant { --thumb-bg: radial-gradient(circle at 78% 35%,#e8a85a 0 16%,transparent 17%),linear-gradient(145deg,#4a2318,#7b3e25); --thumb-accent:#f2bd73; }
+.demo-template-card--restaurant .demo-mini-title { left:22%; width:56%; border-radius:99px; }
+.demo-template-card--restaurant .demo-mini-line { left:31%; width:38%; }
+.demo-template-card--restaurant .demo-mini-card-one,
+.demo-template-card--restaurant .demo-mini-card-two { border-radius:12px 12px 3px 3px; }
+
+.demo-template-card--clinic { --thumb-bg: linear-gradient(120deg,#f4fbfb 0 62%,#bfe8e7 62%); --thumb-surface:#0c6070; --thumb-accent:#42b9b1; }
+.demo-template-card--clinic .demo-mini-title { background:#0c6070; }
+.demo-template-card--clinic .demo-mini-line { background:#67a6ad; }
+.demo-template-card--clinic .demo-template-visual::after { content:'+'; position:absolute; right:13px; top:22px; color:#0c6070; font:bold 24px/1 Arial; }
+
+.demo-template-card--interior { --thumb-bg: linear-gradient(90deg,#e8e1d4 0 62%,#2a2925 62%); --thumb-surface:#2a2925; --thumb-accent:#b68d55; }
+.demo-template-card--interior .demo-mini-card-one { width:40%; height:23px; border-radius:0; }
+.demo-template-card--interior .demo-mini-card-two { left:54%; width:19%; height:28px; border-radius:0; }
+
+.demo-template-card--fitness { --thumb-bg: linear-gradient(116deg,#090909 0 62%,#d9ff3f 62%); --thumb-surface:#fff; --thumb-accent:#d9ff3f; }
+.demo-template-card--fitness .demo-mini-title { transform:skew(-12deg); width:48%; }
+.demo-template-card--fitness .demo-mini-card-one,
+.demo-template-card--fitness .demo-mini-card-two { transform:skew(-10deg); background:#222; }
+
+.demo-template-card--cleaning { --thumb-bg: radial-gradient(circle at 82% 24%,#fff 0 6%,transparent 7%),radial-gradient(circle at 70% 48%,#fff 0 9%,transparent 10%),linear-gradient(135deg,#e9ffff,#52cbc6); --thumb-surface:#146b7a; --thumb-accent:#63d5cf; }
+.demo-template-card--cleaning .demo-mini-title { background:#146b7a; border-radius:6px; }
+.demo-template-card--cleaning .demo-mini-line { background:#4f9ca5; }
+.demo-template-card--cleaning .demo-mini-card-one,
+.demo-template-card--cleaning .demo-mini-card-two { border-radius:8px; }
+
+.demo-template-card--automotive { --thumb-bg: linear-gradient(118deg,#0d0e10 0 70%,#e33732 70%); --thumb-surface:#fff; --thumb-accent:#e33732; }
+.demo-template-card--automotive .demo-template-visual::after { content:''; position:absolute; right:10px; bottom:10px; width:22px; height:22px; border:5px solid #222; border-radius:50%; box-shadow:-28px 0 0 -1px #222; }
+.demo-template-card--automotive .demo-mini-title { transform:skew(-10deg); }
+
+.demo-template-card--beauty { --thumb-bg: radial-gradient(circle at 76% 45%,rgba(255,255,255,.7) 0 20%,transparent 21%),linear-gradient(145deg,#f6e7e6,#b98996); --thumb-surface:#5d454b; --thumb-accent:#d7b7a5; }
+.demo-template-card--beauty .demo-mini-title { left:20%; width:60%; border-radius:99px; background:#5d454b; }
+.demo-template-card--beauty .demo-mini-line { left:33%; width:34%; background:#8d6872; }
+.demo-template-card--beauty .demo-mini-card-one,
+.demo-template-card--beauty .demo-mini-card-two { border-radius:18px 18px 4px 4px; }
+
+.demo-template-card--consulting { --thumb-bg: repeating-linear-gradient(90deg,transparent 0 19px,rgba(255,255,255,.05) 19px 20px),linear-gradient(145deg,#172a49,#31557f); --thumb-accent:#4ea3c8; }
+.demo-template-card--consulting .demo-mini-card-one,
+.demo-template-card--consulting .demo-mini-card-two { border-radius:1px; }
+
+.demo-template-card--ecommerce { --thumb-bg: linear-gradient(135deg,#f5f5f7,#fff); --thumb-surface:#22232a; --thumb-accent:#ffb347; }
+.demo-template-card--ecommerce .demo-mini-title { background:#22232a; }
+.demo-template-card--ecommerce .demo-mini-line { background:#8c8d95; }
+.demo-template-card--ecommerce .demo-mini-card-one,
+.demo-template-card--ecommerce .demo-mini-card-two { height:25px; border-radius:6px; background:#fff; box-shadow:0 3px 9px rgba(0,0,0,.15),inset 0 4px var(--thumb-accent); }
+
+/* Smooth but restrained preview change. */
+.construction-site.is-switching {
+  opacity: .45;
+  transform: translateY(4px);
+}
+.construction-site {
+  transition: opacity .18s ease, transform .18s ease;
+}
+
+/* Industry-correct hero visuals: no café photo on a clinic, gym, spa, etc. */
+.template-clinic .construction-hero {
+  background:
+    radial-gradient(circle at 78% 38%, rgba(66,185,177,.24) 0 15%, transparent 16%),
+    radial-gradient(circle at 84% 52%, rgba(12,96,112,.12) 0 24%, transparent 25%),
+    linear-gradient(120deg,#f7fdfd 0 62%,#d9f1f1 62% 100%);
+}
+.template-clinic .construction-hero::after {
+  content: '+';
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(12,96,112,.22);
+  font: 800 150px/1 Arial,sans-serif;
+}
+
+.template-fitness .construction-hero {
+  background:
+    linear-gradient(112deg,rgba(0,0,0,.96) 0 57%,rgba(0,0,0,.55) 57% 100%),
+    repeating-linear-gradient(120deg,transparent 0 34px,rgba(217,255,63,.12) 34px 38px),
+    #101010;
+}
+.template-fitness .construction-hero::after {
+  content: 'MOVE';
+  position: absolute;
+  right: 3%;
+  bottom: -20px;
+  color: rgba(217,255,63,.12);
+  font: italic 900 120px/.8 Arial,sans-serif;
+  letter-spacing: -.08em;
+}
+
+.template-cleaning .construction-hero {
+  background:
+    radial-gradient(circle at 80% 26%,rgba(255,255,255,.9) 0 3%,transparent 3.4%),
+    radial-gradient(circle at 72% 48%,rgba(255,255,255,.75) 0 7%,transparent 7.5%),
+    radial-gradient(circle at 88% 62%,rgba(255,255,255,.55) 0 10%,transparent 10.5%),
+    linear-gradient(120deg,#f4ffff 0 56%,#9be5e1 56% 100%);
+}
+.template-cleaning .construction-hero::after {
+  content: '✦';
+  position: absolute;
+  right: 12%;
+  top: 30%;
+  color: rgba(20,107,122,.38);
+  font: 700 88px/1 Georgia,serif;
+}
+
+.template-automotive .construction-hero {
+  background:
+    radial-gradient(circle at 82% 63%,transparent 0 42px,#2b2d31 43px 53px,transparent 54px),
+    radial-gradient(circle at 62% 63%,transparent 0 42px,#2b2d31 43px 53px,transparent 54px),
+    linear-gradient(168deg,transparent 0 54%,rgba(227,55,50,.75) 54% 56%,transparent 56%),
+    linear-gradient(115deg,#08090a 0 62%,#202226 62% 100%);
+}
+.template-automotive .construction-hero::after {
+  content: '';
+  position: absolute;
+  right: 11%;
+  top: 43%;
+  width: 240px;
+  height: 58px;
+  border-radius: 70% 35% 12px 12px;
+  border-bottom: 5px solid var(--demo-accent);
+  background: linear-gradient(150deg,transparent 0 42%,rgba(255,255,255,.12) 43% 58%,transparent 59%);
+  transform: skewX(-12deg);
+}
+
+.template-beauty .construction-hero {
+  background:
+    radial-gradient(circle at 78% 48%,rgba(255,255,255,.5) 0 19%,transparent 20%),
+    radial-gradient(circle at 72% 40%,rgba(255,255,255,.28) 0 30%,transparent 31%),
+    linear-gradient(125deg,#654850 0 54%,#c69ca4 54% 100%);
+}
+.template-beauty .construction-hero::after {
+  content: '';
+  position: absolute;
+  right: 8%;
+  top: 18%;
+  width: 190px;
+  height: 250px;
+  border: 2px solid rgba(255,255,255,.35);
+  border-radius: 95px 95px 18px 18px;
+}
+
+.template-ecommerce .construction-hero::after {
+  content: '';
+  position: absolute;
+  right: 9%;
+  top: 18%;
+  width: 210px;
+  height: 220px;
+  border-radius: 22px;
+  background:
+    linear-gradient(var(--demo-accent),var(--demo-accent)) 24px 26px/70px 10px no-repeat,
+    linear-gradient(#e8e8ed,#e8e8ed) 24px 48px/112px 6px no-repeat,
+    linear-gradient(135deg,#fff,#f0f0f4);
+  box-shadow: -42px 45px 0 -10px #fff, 0 24px 65px rgba(34,35,42,.16);
+  transform: rotate(4deg);
+}
+
+/* Keep hero copy above decorative artwork. */
+.template-clinic .construction-hero-content,
+.template-fitness .construction-hero-content,
+.template-cleaning .construction-hero-content,
+.template-automotive .construction-hero-content,
+.template-beauty .construction-hero-content,
+.template-ecommerce .construction-hero-content { z-index: 3; }
+
+/* Better and sector-appropriate project cards. */
+.template-realestate .project-one { background-image: linear-gradient(transparent 30%,rgba(0,0,0,.72)),url('../images/portfolio/house.jpg'); }
+.template-realestate .project-two { background-image: linear-gradient(transparent 30%,rgba(0,0,0,.72)),url('../images/portfolio/smart_house.jpg'); }
+.template-realestate .project-three { background-image: linear-gradient(transparent 30%,rgba(0,0,0,.72)),url('../images/portfolio/masjid_fornt.jpg'); }
+
+.template-restaurant .project-one { background-image: linear-gradient(transparent 30%,rgba(40,15,7,.78)),url('../images/portfolio/cafe_3d_01.jpg'); }
+.template-restaurant .project-two { background-image: linear-gradient(transparent 30%,rgba(40,15,7,.78)),url('../images/portfolio/cafe_3d_02.jpg'); }
+.template-restaurant .project-three { background-image: linear-gradient(transparent 30%,rgba(40,15,7,.78)),url('../images/portfolio/cafe_3d_03.jpg'); }
+
+.template-interior .project-one { background-image: linear-gradient(transparent 30%,rgba(20,18,15,.76)),url('../images/portfolio/cafe_3d_03.jpg'); }
+.template-interior .project-two { background-image: linear-gradient(transparent 30%,rgba(20,18,15,.76)),url('../images/portfolio/cafe_3d_02.jpg'); }
+.template-interior .project-three { background-image: linear-gradient(transparent 30%,rgba(20,18,15,.76)),url('../images/portfolio/cafe_3d_01.jpg'); }
+
+.template-clinic .construction-project,
+.template-fitness .construction-project,
+.template-cleaning .construction-project,
+.template-automotive .construction-project,
+.template-beauty .construction-project,
+.template-consulting .construction-project,
+.template-ecommerce .construction-project {
+  background-image: none;
+}
+
+.template-clinic .construction-project { background: linear-gradient(145deg,#0c6070,#49b6b0); }
+.template-clinic .project-one::after { content:'+'; }
+.template-clinic .project-two::after { content:'◉'; }
+.template-clinic .project-three::after { content:'✓'; }
+
+.template-fitness .construction-project { background: linear-gradient(145deg,#111,#2a2a2a); border-bottom:4px solid var(--demo-accent); }
+.template-fitness .project-one::after { content:'01'; }
+.template-fitness .project-two::after { content:'02'; }
+.template-fitness .project-three::after { content:'03'; }
+
+.template-cleaning .construction-project { background: linear-gradient(145deg,#0f6775,#63d5cf); }
+.template-cleaning .project-one::after { content:'✦'; }
+.template-cleaning .project-two::after { content:'○'; }
+.template-cleaning .project-three::after { content:'✓'; }
+
+.template-automotive .construction-project { background: linear-gradient(145deg,#0d0e10,#34363b); border-left:5px solid var(--demo-accent); }
+.template-automotive .project-one::after { content:'◉'; }
+.template-automotive .project-two::after { content:'⌁'; }
+.template-automotive .project-three::after { content:'✦'; }
+
+.template-beauty .construction-project { background: linear-gradient(145deg,#6f4f58,#d6aeb4); }
+.template-beauty .project-one::after { content:'✧'; }
+.template-beauty .project-two::after { content:'○'; }
+.template-beauty .project-three::after { content:'❋'; }
+
+.template-consulting .construction-project { background: linear-gradient(145deg,#172a49,#3e668c); border-top:3px solid var(--demo-accent); }
+.template-consulting .project-one::after { content:'↗'; }
+.template-consulting .project-two::after { content:'≡'; }
+.template-consulting .project-three::after { content:'✓'; }
+
+.template-ecommerce .construction-project { background: linear-gradient(145deg,#fff,#ececf1); color:#22232a; border:1px solid #e3e3e8; }
+.template-ecommerce .construction-project::before { background:linear-gradient(transparent 35%,rgba(255,255,255,.9)); }
+.template-ecommerce .construction-project span { color:#9c621f; }
+.template-ecommerce .construction-project strong { color:#22232a; }
+.template-ecommerce .project-one::after { content:'▣'; }
+.template-ecommerce .project-two::after { content:'◆'; }
+.template-ecommerce .project-three::after { content:'→'; }
+
+.template-clinic .construction-project::after,
+.template-fitness .construction-project::after,
+.template-cleaning .construction-project::after,
+.template-automotive .construction-project::after,
+.template-beauty .construction-project::after,
+.template-consulting .construction-project::after,
+.template-ecommerce .construction-project::after {
+  position: absolute;
+  z-index: 0;
+  top: 18px;
+  right: 20px;
+  color: rgba(255,255,255,.22);
+  font: 800 58px/1 Arial,sans-serif;
+}
+.template-ecommerce .construction-project::after { color:rgba(34,35,42,.12); }
+
+/* Mobile preview: keep generated artwork inside the phone frame. */
+.demo-device-stage.is-mobile .construction-hero::after {
+  right: -22px;
+  transform: scale(.68);
+  transform-origin: right center;
+}
+.demo-device-stage.is-mobile .template-fitness .construction-hero::after { bottom: 12px; right: -35px; }
+.demo-device-stage.is-mobile .template-automotive .construction-hero::after { top: 23%; right: -35px; }
+.demo-device-stage.is-mobile .template-beauty .construction-hero::after { right: -45px; top: 12%; }
+.demo-device-stage.is-mobile .template-ecommerce .construction-hero::after { right: -38px; top: 12%; }
+
+@media (max-width: 680px) {
+  .demo-template-grid { grid-template-columns: 1fr; max-height: 470px; }
+  .demo-template-card { grid-template-columns: 112px 1fr; grid-template-rows: auto; align-items: center; }
+  .demo-template-visual { height: 68px; }
+}
+
+
+/* =========================================================
+   AVELOR AI DEMO — 10 ADDITIONAL INDUSTRY TEMPLATES (V3)
+   Total available templates: 21.
+   ========================================================= */
+
+/* 12. Education & Academy */
+.template-education { background:#f5f9ff; }
+.template-education .construction-header { background:#fff; border-bottom:4px solid var(--demo-accent); }
+.template-education .construction-brand-mark,
+.template-education .construction-contact-btn,
+.template-education .construction-primary-btn { border-radius:10px; }
+.template-education .construction-hero {
+  background:
+    radial-gradient(circle at 82% 30%,rgba(243,182,31,.34) 0 12%,transparent 12.5%),
+    radial-gradient(circle at 73% 65%,rgba(21,59,102,.12) 0 22%,transparent 22.5%),
+    linear-gradient(118deg,#153b66 0 58%,#eaf2ff 58% 100%);
+}
+.template-education .construction-hero::after { content:'ABC'; position:absolute; right:8%; top:28%; color:rgba(21,59,102,.2); font:900 78px/1 Arial,sans-serif; letter-spacing:-.08em; }
+.template-education .construction-about { background:#fff; }
+.template-education .construction-values div { padding:13px; border:1px solid #dfe9f6; border-radius:12px; }
+.template-education .construction-services-section { background:#eef5ff; }
+.template-education .construction-service-grid article { border:1px solid #dbe8f7; border-top:4px solid var(--demo-accent); border-radius:14px; }
+.template-education .construction-projects { background:#153b66; }
+.template-education .construction-project { background:linear-gradient(145deg,#214e80,#153b66); border-radius:14px; }
+.template-education .construction-cta { background:#fff7df; }
+
+/* 13. Law Firm */
+.template-law { font-family:Georgia,'Times New Roman',serif; background:#f5f2eb; }
+.template-law .construction-header { min-height:78px; background:#111f35; border-bottom:1px solid rgba(196,162,97,.45); }
+.template-law .construction-brand,
+.template-law .construction-nav { color:#fff; }
+.template-law .construction-brand-mark { background:transparent; border:1px solid var(--demo-accent); color:var(--demo-accent); }
+.template-law .construction-contact-btn,
+.template-law .construction-primary-btn { background:var(--demo-accent); border-radius:0; }
+.template-law .construction-hero { min-height:430px; text-align:center; justify-content:center; background:linear-gradient(rgba(17,31,53,.93),rgba(17,31,53,.93)),repeating-linear-gradient(90deg,transparent 0 69px,rgba(255,255,255,.04) 69px 70px); }
+.template-law .construction-hero-content { max-width:760px; }
+.template-law .construction-hero-actions { justify-content:center; }
+.template-law .construction-hero-stat { display:none; }
+.template-law .construction-kicker { color:var(--demo-accent); }
+.template-law .construction-about { grid-template-columns:.55fr 1.65fr 1fr; background:#f5f2eb; }
+.template-law .construction-about h3,
+.template-law .construction-section-heading h3,
+.template-law .construction-cta h3 { font-family:Georgia,'Times New Roman',serif; font-weight:500; }
+.template-law .construction-services-section { background:#fff; }
+.template-law .construction-service-grid article { border:1px solid #ddd4c4; border-top:1px solid #ddd4c4; }
+.template-law .construction-service-grid article > span { margin-bottom:38px; }
+.template-law .construction-projects { background:#111f35; }
+.template-law .construction-project { background:linear-gradient(145deg,#172b49,#0e192b); border:1px solid rgba(196,162,97,.45); }
+.template-law .construction-cta { background:#eee7da; }
+.template-law .construction-footer { background:#0a1423; }
+
+/* 14. Hotel & Hospitality */
+.template-hotel { background:#f6f1e7; font-family:Georgia,'Times New Roman',serif; }
+.template-hotel .construction-header { min-height:80px; background:#f8f3e9; border-bottom:0; }
+.template-hotel .construction-brand-mark { border-radius:50%; background:transparent; border:1px solid var(--demo-accent); color:var(--demo-primary); }
+.template-hotel .construction-contact-btn,
+.template-hotel .construction-primary-btn,
+.template-hotel .construction-secondary-btn { border-radius:999px; }
+.template-hotel .construction-hero { min-height:460px; justify-content:center; text-align:center; background:radial-gradient(circle at 50% 36%,rgba(213,180,111,.23),transparent 30%),linear-gradient(135deg,#18352d,#315a4d); }
+.template-hotel .construction-hero-content { max-width:720px; }
+.template-hotel .construction-hero-actions { justify-content:center; }
+.template-hotel .construction-hero-stat { right:50%; transform:translateX(50%); bottom:26px; border:0; padding:0; text-align:center; }
+.template-hotel .construction-kicker { padding:7px 14px; border:1px solid rgba(213,180,111,.5); border-radius:999px; }
+.template-hotel .construction-about { background:#f6f1e7; }
+.template-hotel .construction-about h3,
+.template-hotel .construction-section-heading h3,
+.template-hotel .construction-cta h3 { font-family:Georgia,'Times New Roman',serif; font-weight:500; }
+.template-hotel .construction-services-section { background:#fff; }
+.template-hotel .construction-service-grid article { border:1px solid #e4dac8; border-top:1px solid #e4dac8; text-align:center; }
+.template-hotel .construction-projects { background:#24433a; }
+.template-hotel .construction-project-grid { grid-template-columns:1fr 1.25fr 1fr; }
+.template-hotel .construction-project { background:linear-gradient(145deg,#3f6a5c,#1f3c33); border-radius:120px 120px 10px 10px; min-height:250px; }
+.template-hotel .construction-cta { background:#f6f1e7; }
+
+/* 15. Travel & Tourism */
+.template-travel { background:#f4fbff; }
+.template-travel .construction-header { background:#fff; border-bottom:0; }
+.template-travel .construction-brand-mark,
+.template-travel .construction-contact-btn,
+.template-travel .construction-primary-btn,
+.template-travel .construction-secondary-btn { border-radius:999px; }
+.template-travel .construction-hero { background:radial-gradient(circle at 83% 35%,rgba(255,118,93,.72) 0 14%,transparent 14.5%),radial-gradient(circle at 75% 58%,rgba(255,255,255,.28) 0 25%,transparent 25.5%),linear-gradient(125deg,#0d6a87 0 60%,#86d7eb 60% 100%); }
+.template-travel .construction-hero::after { content:'✈'; position:absolute; right:12%; top:24%; color:rgba(255,255,255,.65); font:700 76px/1 Arial,sans-serif; transform:rotate(-12deg); }
+.template-travel .construction-about { background:#fff; }
+.template-travel .construction-values { grid-template-columns:repeat(3,1fr); }
+.template-travel .construction-values div { padding:14px; border:1px solid #d9edf4; border-radius:16px; }
+.template-travel .construction-services-section { background:#eaf8fc; }
+.template-travel .construction-service-grid article { border:0; border-radius:18px; box-shadow:0 12px 28px rgba(17,107,135,.1); }
+.template-travel .construction-projects { background:#0f6a86; }
+.template-travel .construction-project { background:linear-gradient(145deg,#1e86a3,#0b526b); border-radius:20px; }
+.template-travel .construction-cta { margin:0 5% 45px !important; border-radius:24px; background:#fff2ed; }
+
+/* 16. Technology Company */
+.template-technology { --demo-text:#e9f5ff; --demo-muted:#8ca1b5; background:#08101d; color:#e9f5ff; }
+.template-technology .construction-header { background:#0a1322; border-bottom:1px solid rgba(53,213,232,.25); }
+.template-technology .construction-brand,
+.template-technology .construction-nav { color:#e9f5ff; }
+.template-technology .construction-brand-mark { border-radius:8px; background:rgba(53,213,232,.12); border:1px solid var(--demo-accent); color:var(--demo-accent); }
+.template-technology .construction-contact-btn,
+.template-technology .construction-primary-btn { border-radius:8px; color:#041014; }
+.template-technology .construction-hero { background:radial-gradient(circle at 79% 42%,rgba(53,213,232,.18),transparent 24%),linear-gradient(rgba(6,14,26,.92),rgba(6,14,26,.92)),repeating-linear-gradient(0deg,transparent 0 39px,rgba(53,213,232,.08) 39px 40px),repeating-linear-gradient(90deg,transparent 0 39px,rgba(53,213,232,.08) 39px 40px); }
+.template-technology .construction-hero::after { content:'</>'; position:absolute; right:8%; top:34%; color:rgba(53,213,232,.18); font:900 88px/1 monospace; }
+.template-technology .construction-about { background:#0d1726; }
+.template-technology .construction-about h3,
+.template-technology .construction-values strong,
+.template-technology .construction-section-heading h3 { color:#e9f5ff; }
+.template-technology .construction-values div { border-color:#213249; }
+.template-technology .construction-services-section { background:#08101d; }
+.template-technology .construction-service-grid article { background:#0d1726; border:1px solid #1c3045; border-top:1px solid #1c3045; border-radius:12px; }
+.template-technology .construction-service-grid h4 { color:#e9f5ff; }
+.template-technology .construction-projects { background:#0d1726; }
+.template-technology .construction-project { background:linear-gradient(145deg,#0f2438,#0a1322); border:1px solid rgba(53,213,232,.28); border-radius:12px; }
+.template-technology .construction-cta { background:#08101d; border-top:1px solid #1c3045; }
+.template-technology .construction-cta h3 { color:#e9f5ff; }
+.template-technology .construction-footer { background:#040914; }
+
+/* 17. Events & Weddings */
+.template-events { background:#fff7fc; }
+.template-events .construction-header { background:#fff; border-bottom:0; }
+.template-events .construction-brand-mark,
+.template-events .construction-contact-btn,
+.template-events .construction-primary-btn,
+.template-events .construction-secondary-btn { border-radius:999px; }
+.template-events .construction-hero { min-height:430px; text-align:center; justify-content:center; background:radial-gradient(circle at 18% 20%,rgba(243,168,200,.28),transparent 18%),radial-gradient(circle at 82% 72%,rgba(243,168,200,.28),transparent 20%),linear-gradient(135deg,#4a204f,#7d3b82); }
+.template-events .construction-hero-content { max-width:720px; }
+.template-events .construction-hero-actions { justify-content:center; }
+.template-events .construction-hero-stat { display:none; }
+.template-events .construction-kicker { padding:7px 14px; border:1px solid rgba(255,255,255,.4); border-radius:999px; color:#fff; }
+.template-events .construction-about { background:#fff7fc; }
+.template-events .construction-values { grid-template-columns:repeat(3,1fr); }
+.template-events .construction-values div { padding:15px; border:1px solid #efd8eb; border-radius:18px; background:#fff; text-align:center; }
+.template-events .construction-services-section { background:#5a285f; }
+.template-events .construction-services-section h3 { color:#fff; }
+.template-events .construction-service-grid article { border:0; border-radius:24px 24px 8px 8px; }
+.template-events .construction-projects { background:#fff7fc; color:var(--demo-text); }
+.template-events .construction-projects .construction-section-heading h3 { color:var(--demo-primary); }
+.template-events .construction-project { background:linear-gradient(145deg,#7d3b82,#c26fa5); border-radius:20px; }
+.template-events .construction-cta { margin:0 6% 55px !important; border-radius:22px; background:#5a285f; }
+.template-events .construction-cta h3 { color:#fff; }
+.template-events .construction-cta p { color:rgba(255,255,255,.72); }
+
+/* 18. Photography Studio */
+.template-photography { background:#fff; font-family:Arial,Helvetica,sans-serif; }
+.template-photography .construction-header { background:#0d0d0d; border-bottom:0; }
+.template-photography .construction-brand,
+.template-photography .construction-nav { color:#fff; }
+.template-photography .construction-brand-mark { background:#fff; color:#111; }
+.template-photography .construction-contact-btn,
+.template-photography .construction-primary-btn { background:#fff; color:#111; border-radius:0; }
+.template-photography .construction-hero { min-height:470px; background:linear-gradient(90deg,rgba(0,0,0,.9) 0 52%,rgba(0,0,0,.18) 52%),linear-gradient(145deg,#111,#555); }
+.template-photography .construction-hero::after { content:'FRAME'; position:absolute; right:-16px; bottom:-28px; color:rgba(255,255,255,.09); font:900 116px/.9 Arial,sans-serif; letter-spacing:-.08em; }
+.template-photography .construction-hero h2 { text-transform:uppercase; font-size:clamp(36px,6vw,72px); }
+.template-photography .construction-about { grid-template-columns:.45fr 1.75fr 1fr; background:#fff; }
+.template-photography .construction-services-section { background:#f2f2f2; }
+.template-photography .construction-service-grid { gap:1px; background:#d8d8d8; }
+.template-photography .construction-service-grid article { border:0; background:#fff; }
+.template-photography .construction-projects { background:#111; }
+.template-photography .construction-project-grid { grid-template-columns:1fr 1fr 1fr; gap:2px; }
+.template-photography .construction-project { background:linear-gradient(145deg,#151515,#555); min-height:275px; }
+.template-photography .project-two { background:linear-gradient(145deg,#6a6a6a,#191919); }
+.template-photography .construction-cta { background:#fff; border-top:1px solid #ddd; }
+.template-photography .construction-footer { background:#080808; }
+
+/* 19. Architecture Studio */
+.template-architecture { background:#eee9df; font-family:Arial,Helvetica,sans-serif; }
+.template-architecture .construction-header { min-height:76px; background:#eee9df; border-bottom:1px solid #cfc7b9; }
+.template-architecture .construction-brand-mark,
+.template-architecture .construction-contact-btn,
+.template-architecture .construction-primary-btn { border-radius:0; }
+.template-architecture .construction-hero { min-height:430px; background:linear-gradient(90deg,#2d302e 0 56%,#d9d0c1 56% 100%); }
+.template-architecture .construction-hero::after { content:''; position:absolute; right:10%; top:18%; width:210px; height:260px; border:1px solid rgba(45,48,46,.35); box-shadow:-38px 38px 0 -1px transparent,-38px 38px 0 0 rgba(196,119,72,.48); }
+.template-architecture .construction-hero h2 { max-width:600px; font-size:clamp(34px,5vw,62px); }
+.template-architecture .construction-about { grid-template-columns:.5fr 1.6fr 1.1fr; background:#eee9df; border-bottom:1px solid #cfc7b9; }
+.template-architecture .construction-values div { border-color:#cfc7b9; }
+.template-architecture .construction-services-section { background:#f8f5ee; }
+.template-architecture .construction-service-grid { gap:0; border:1px solid #d8d0c4; }
+.template-architecture .construction-service-grid article { border:0; border-right:1px solid #d8d0c4; }
+.template-architecture .construction-projects { background:#2d302e; }
+.template-architecture .construction-project-grid { grid-template-columns:1fr 1.35fr 1fr; gap:1px; }
+.template-architecture .construction-project { background:linear-gradient(145deg,#4a4d4a,#202321); min-height:245px; }
+.template-architecture .construction-cta { background:#eee9df; }
+
+/* 20. Logistics & Freight */
+.template-logistics { background:#f1f4f7; }
+.template-logistics .construction-header { background:#102a43; border-bottom:4px solid var(--demo-accent); }
+.template-logistics .construction-brand,
+.template-logistics .construction-nav { color:#fff; }
+.template-logistics .construction-brand-mark { background:var(--demo-accent); color:#102a43; }
+.template-logistics .construction-contact-btn,
+.template-logistics .construction-primary-btn { background:var(--demo-accent); border-radius:0; }
+.template-logistics .construction-hero { background:linear-gradient(110deg,rgba(16,42,67,.97) 0 61%,rgba(16,42,67,.55) 61%),repeating-linear-gradient(135deg,transparent 0 28px,rgba(242,140,40,.12) 28px 32px),#163a5c; }
+.template-logistics .construction-hero::after { content:'→→→'; position:absolute; right:7%; top:42%; color:rgba(242,140,40,.38); font:900 64px/1 Arial,sans-serif; letter-spacing:-.1em; }
+.template-logistics .construction-about { background:#fff; }
+.template-logistics .construction-services-section { background:#e9eef3; }
+.template-logistics .construction-service-grid article { border:0; border-left:5px solid var(--demo-accent); clip-path:polygon(0 0,95% 0,100% 12%,100% 100%,0 100%); }
+.template-logistics .construction-projects { background:#102a43; }
+.template-logistics .construction-project { background:linear-gradient(145deg,#214d72,#0c2237); border-bottom:5px solid var(--demo-accent); }
+.template-logistics .construction-cta { background:#fff; }
+.template-logistics .construction-footer { background:#091d2e; }
+
+/* 21. Pet Care & Veterinary */
+.template-petcare { background:#f4fbfa; }
+.template-petcare .construction-header { background:#fff; border-bottom:0; }
+.template-petcare .construction-brand-mark,
+.template-petcare .construction-contact-btn,
+.template-petcare .construction-primary-btn,
+.template-petcare .construction-secondary-btn { border-radius:999px; }
+.template-petcare .construction-hero { background:radial-gradient(circle at 78% 34%,rgba(255,139,115,.55) 0 10%,transparent 10.5%),radial-gradient(circle at 88% 52%,rgba(255,139,115,.32) 0 7%,transparent 7.5%),radial-gradient(circle at 70% 63%,rgba(39,107,103,.18) 0 18%,transparent 18.5%),linear-gradient(125deg,#276b67 0 58%,#dff6f2 58% 100%); }
+.template-petcare .construction-hero::after { content:'♡'; position:absolute; right:11%; top:34%; color:rgba(39,107,103,.32); font:900 108px/1 Arial,sans-serif; }
+.template-petcare .construction-about { background:#fff; }
+.template-petcare .construction-values { grid-template-columns:repeat(3,1fr); }
+.template-petcare .construction-values div { padding:14px; border:1px solid #d7ece9; border-radius:18px; }
+.template-petcare .construction-services-section { background:#e8f7f4; }
+.template-petcare .construction-service-grid article { border:0; border-radius:22px; box-shadow:0 12px 26px rgba(39,107,103,.1); }
+.template-petcare .construction-projects { background:#276b67; }
+.template-petcare .construction-project { background:linear-gradient(145deg,#3d8580,#245d59); border-radius:26px; }
+.template-petcare .construction-cta { margin:0 6% 50px !important; border-radius:24px; background:#fff0ec; }
+
+/* Miniature cards for the 10 new template choices. */
+.demo-template-card--education { --thumb-bg:radial-gradient(circle at 80% 35%,#f3b61f 0 15%,transparent 16%),linear-gradient(135deg,#153b66 0 62%,#eaf2ff 62%); --thumb-accent:#f3b61f; }
+.demo-template-card--education .demo-mini-card-one,
+.demo-template-card--education .demo-mini-card-two { border-radius:8px; }
+
+.demo-template-card--law { --thumb-bg:linear-gradient(145deg,#111f35,#263c5e); --thumb-accent:#c4a261; }
+.demo-template-card--law .demo-mini-title { left:22%; width:56%; }
+.demo-template-card--law .demo-mini-line { left:31%; width:38%; background:#c4a261; }
+.demo-template-card--law .demo-mini-card-one,
+.demo-template-card--law .demo-mini-card-two { border-radius:0; border:1px solid rgba(196,162,97,.45); background:transparent; }
+
+.demo-template-card--hotel { --thumb-bg:radial-gradient(circle at 50% 40%,rgba(213,180,111,.4),transparent 30%),linear-gradient(145deg,#24433a,#3f6a5c); --thumb-accent:#d5b46f; }
+.demo-template-card--hotel .demo-mini-title { left:20%; width:60%; border-radius:99px; }
+.demo-template-card--hotel .demo-mini-line { left:32%; width:36%; }
+.demo-template-card--hotel .demo-mini-card-one,
+.demo-template-card--hotel .demo-mini-card-two { border-radius:20px 20px 3px 3px; }
+
+.demo-template-card--travel { --thumb-bg:radial-gradient(circle at 80% 35%,#ff765d 0 16%,transparent 17%),linear-gradient(145deg,#116b87,#85d8eb); --thumb-accent:#ff765d; }
+.demo-template-card--travel .demo-template-visual::after { content:'✈'; position:absolute; right:13px; top:24px; color:rgba(255,255,255,.78); font:700 22px/1 Arial; transform:rotate(-12deg); }
+.demo-template-card--travel .demo-mini-card-one,
+.demo-template-card--travel .demo-mini-card-two { border-radius:12px; }
+
+.demo-template-card--technology { --thumb-bg:repeating-linear-gradient(0deg,transparent 0 15px,rgba(53,213,232,.08) 15px 16px),repeating-linear-gradient(90deg,transparent 0 15px,rgba(53,213,232,.08) 15px 16px),#0c1425; --thumb-accent:#35d5e8; }
+.demo-template-card--technology .demo-mini-title { background:#35d5e8; }
+.demo-template-card--technology .demo-mini-card-one,
+.demo-template-card--technology .demo-mini-card-two { background:#14243a; border:1px solid rgba(53,213,232,.5); box-shadow:none; }
+
+.demo-template-card--events { --thumb-bg:radial-gradient(circle at 20% 20%,rgba(243,168,200,.45),transparent 20%),linear-gradient(145deg,#5a285f,#9a4c8d); --thumb-accent:#f3a8c8; }
+.demo-template-card--events .demo-mini-title { left:20%; width:60%; border-radius:99px; }
+.demo-template-card--events .demo-mini-line { left:32%; width:36%; }
+.demo-template-card--events .demo-mini-card-one,
+.demo-template-card--events .demo-mini-card-two { border-radius:18px 18px 5px 5px; }
+
+.demo-template-card--photography { --thumb-bg:linear-gradient(90deg,#0d0d0d 0 58%,#777 58%); --thumb-accent:#d6a66f; }
+.demo-template-card--photography .demo-mini-nav { background:#fff; }
+.demo-template-card--photography .demo-mini-title { width:48%; height:9px; border-radius:0; }
+.demo-template-card--photography .demo-mini-card-one,
+.demo-template-card--photography .demo-mini-card-two { height:28px; border-radius:0; background:#1b1b1b; }
+
+.demo-template-card--architecture { --thumb-bg:linear-gradient(90deg,#2d302e 0 58%,#d9d0c1 58%); --thumb-accent:#c47748; }
+.demo-template-card--architecture .demo-mini-title,
+.demo-template-card--architecture .demo-mini-card-one,
+.demo-template-card--architecture .demo-mini-card-two { border-radius:0; }
+.demo-template-card--architecture .demo-mini-card-two { height:30px; width:20%; left:56%; }
+
+.demo-template-card--logistics { --thumb-bg:repeating-linear-gradient(135deg,transparent 0 20px,rgba(242,140,40,.15) 20px 23px),linear-gradient(145deg,#102a43,#1f4c72); --thumb-accent:#f28c28; }
+.demo-template-card--logistics .demo-mini-card-one,
+.demo-template-card--logistics .demo-mini-card-two { border-radius:0; clip-path:polygon(0 0,87% 0,100% 26%,100% 100%,0 100%); }
+
+.demo-template-card--petcare { --thumb-bg:radial-gradient(circle at 80% 30%,#ff8b73 0 12%,transparent 13%),radial-gradient(circle at 70% 55%,rgba(255,139,115,.65) 0 8%,transparent 9%),linear-gradient(145deg,#276b67,#dff6f2); --thumb-accent:#ff8b73; }
+.demo-template-card--petcare .demo-template-visual::after { content:'♡'; position:absolute; right:13px; top:22px; color:#276b67; font:900 25px/1 Arial; }
+.demo-template-card--petcare .demo-mini-card-one,
+.demo-template-card--petcare .demo-mini-card-two { border-radius:14px; }
+
+/* Keep generated text above new decorative artwork. */
+.template-education .construction-hero-content,
+.template-travel .construction-hero-content,
+.template-technology .construction-hero-content,
+.template-photography .construction-hero-content,
+.template-architecture .construction-hero-content,
+.template-logistics .construction-hero-content,
+.template-petcare .construction-hero-content { z-index:3; }
+
+/* New project cards use sector-safe graphic treatments instead of unrelated photos. */
+.template-education .construction-project,
+.template-law .construction-project,
+.template-hotel .construction-project,
+.template-travel .construction-project,
+.template-technology .construction-project,
+.template-events .construction-project,
+.template-photography .construction-project,
+.template-architecture .construction-project,
+.template-logistics .construction-project,
+.template-petcare .construction-project { background-image:none; }
+
+.template-education .project-one::after { content:'A+'; }
+.template-education .project-two::after { content:'01'; }
+.template-education .project-three::after { content:'✦'; }
+.template-law .project-one::after { content:'§'; }
+.template-law .project-two::after { content:'✓'; }
+.template-law .project-three::after { content:'◈'; }
+.template-hotel .project-one::after { content:'H'; }
+.template-hotel .project-two::after { content:'◇'; }
+.template-hotel .project-three::after { content:'✦'; }
+.template-travel .project-one::after { content:'✈'; }
+.template-travel .project-two::after { content:'◎'; }
+.template-travel .project-three::after { content:'→'; }
+.template-technology .project-one::after { content:'</>'; }
+.template-technology .project-two::after { content:'☁'; }
+.template-technology .project-three::after { content:'⚙'; }
+.template-events .project-one::after { content:'✦'; }
+.template-events .project-two::after { content:'◇'; }
+.template-events .project-three::after { content:'♡'; }
+.template-photography .project-one::after { content:'01'; }
+.template-photography .project-two::after { content:'02'; }
+.template-photography .project-three::after { content:'03'; }
+.template-architecture .project-one::after { content:'□'; }
+.template-architecture .project-two::after { content:'△'; }
+.template-architecture .project-three::after { content:'○'; }
+.template-logistics .project-one::after { content:'→'; }
+.template-logistics .project-two::after { content:'▣'; }
+.template-logistics .project-three::after { content:'✓'; }
+.template-petcare .project-one::after { content:'+'; }
+.template-petcare .project-two::after { content:'♡'; }
+.template-petcare .project-three::after { content:'⌂'; }
+
+.template-education .construction-project::after,
+.template-law .construction-project::after,
+.template-hotel .construction-project::after,
+.template-travel .construction-project::after,
+.template-technology .construction-project::after,
+.template-events .construction-project::after,
+.template-photography .construction-project::after,
+.template-architecture .construction-project::after,
+.template-logistics .construction-project::after,
+.template-petcare .construction-project::after {
+  position:absolute;
+  z-index:0;
+  top:18px;
+  right:20px;
+  color:rgba(255,255,255,.2);
+  font:800 58px/1 Arial,sans-serif;
+}
+
+/* Mobile preview refinements for the additional designs. */
+.demo-device-stage.is-mobile .template-law .construction-hero,
+.demo-device-stage.is-mobile .template-hotel .construction-hero,
+.demo-device-stage.is-mobile .template-events .construction-hero { text-align:left; justify-content:flex-end; }
+.demo-device-stage.is-mobile .construction-site.is-arabic.template-law .construction-hero,
+.demo-device-stage.is-mobile .construction-site.is-arabic.template-hotel .construction-hero,
+.demo-device-stage.is-mobile .construction-site.is-arabic.template-events .construction-hero { text-align:right; }
+.demo-device-stage.is-mobile .template-law .construction-hero-actions,
+.demo-device-stage.is-mobile .template-hotel .construction-hero-actions,
+.demo-device-stage.is-mobile .template-events .construction-hero-actions { justify-content:flex-start; }
+.demo-device-stage.is-mobile .template-travel .construction-values,
+.demo-device-stage.is-mobile .template-events .construction-values,
+.demo-device-stage.is-mobile .template-petcare .construction-values { grid-template-columns:1fr; }
+.demo-device-stage.is-mobile .template-hotel .construction-project-grid,
+.demo-device-stage.is-mobile .template-photography .construction-project-grid,
+.demo-device-stage.is-mobile .template-architecture .construction-project-grid { grid-template-columns:1fr; }
+.demo-device-stage.is-mobile .template-travel .construction-cta,
+.demo-device-stage.is-mobile .template-events .construction-cta,
+.demo-device-stage.is-mobile .template-petcare .construction-cta { margin:0 18px 35px !important; }
