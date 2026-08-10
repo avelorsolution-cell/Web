@@ -2225,3 +2225,106 @@ html[dir="rtl"] .demo-preview-actions { direction: rtl; }
 .demo-device-stage.is-mobile .generated-site{width:390px;min-height:720px;margin:auto}.demo-device-stage.is-mobile .generated-site nav,.demo-device-stage.is-mobile .generated-site header>span{display:none}.demo-device-stage.is-mobile .generated-site [class$="-hero"]{grid-template-columns:1fr!important;padding:32px 22px!important}.demo-device-stage.is-mobile .generated-site [class$="-hero"] h1{font-size:34px!important}.demo-device-stage.is-mobile .generated-site .site-services,.demo-device-stage.is-mobile .generated-site [class$="-programs"],.demo-device-stage.is-mobile .generated-site [class$="-cards"],.demo-device-stage.is-mobile .generated-site [class$="-grid"],.demo-device-stage.is-mobile .generated-site [class$="-listings"]>div{grid-template-columns:1fr!important}.demo-device-stage.is-mobile .generated-site .re-photo,.demo-device-stage.is-mobile .generated-site .cl-card,.demo-device-stage.is-mobile .generated-site .cn-bubbles,.demo-device-stage.is-mobile .generated-site .tc-ui,.demo-device-stage.is-mobile .generated-site .lg-map,.demo-device-stage.is-mobile .generated-site .pc-pet{min-height:210px}.demo-device-stage.is-mobile .generated-site .ft-word{font-size:75px}.demo-device-stage.is-mobile .generated-site .ph-intro,.demo-device-stage.is-mobile .generated-site .ar-project,.demo-device-stage.is-mobile .generated-site .in-mag,.demo-device-stage.is-mobile .generated-site .ev-story,.demo-device-stage.is-mobile .generated-site .co-insight,.demo-device-stage.is-mobile .generated-site .rs-story{grid-template-columns:1fr!important}.demo-device-stage.is-mobile .generated-site .ph-masonry{grid-template-columns:1fr 1fr}.demo-device-stage.is-mobile .generated-site .ph-masonry article{grid-row:auto!important;grid-column:auto!important}.demo-device-stage.is-mobile .generated-site .ht-hero form{position:static;margin:0 20px;grid-template-columns:1fr 1fr}.demo-device-stage.is-mobile .generated-site .ec-head{grid-template-columns:1fr auto}.demo-device-stage.is-mobile .generated-site .ec-search{display:none}
 
 html[dir="rtl"] .generated-site{text-align:right}.generated-site[dir="rtl"] .c-head>strong,.generated-site[dir="rtl"] .re-head strong{margin-left:auto;margin-right:0}
+
+
+/* =========================================================
+   AVELOR 21 TEMPLATE LIBRARY — VISIBLE GRID
+   Keeps every template visible instead of hiding options
+   inside the builder form's scroll area.
+   ========================================================= */
+.demo-template-library {
+  margin-bottom: 30px;
+  padding: 28px;
+  border: 1px solid var(--border);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(212,175,55,.09), transparent 30%),
+    linear-gradient(180deg, #101010, #0b0b0b);
+}
+
+.demo-template-library .demo-panel-head {
+  margin-bottom: 22px;
+}
+
+.demo-template-library .demo-template-label-row {
+  align-items: center;
+  gap: 14px;
+}
+
+.demo-template-library .demo-template-label-row h2 {
+  margin: 0;
+}
+
+.demo-template-library .demo-template-count {
+  white-space: nowrap;
+  min-width: auto;
+  padding: 6px 10px;
+  border: 1px solid rgba(212,175,55,.38);
+  border-radius: 999px;
+  background: rgba(212,175,55,.08);
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.demo-template-library .demo-template-help {
+  margin: 6px 0 0;
+  max-width: 820px;
+  color: #aaa;
+}
+
+/* Override the old internal-scroll selector. */
+.demo-template-library .demo-template-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  max-height: none;
+  overflow: visible;
+  padding: 0;
+}
+
+.demo-template-library .demo-template-card {
+  min-height: 134px;
+}
+
+.demo-template-library .template-mini {
+  height: 66px;
+}
+
+@media (max-width: 1180px) {
+  .demo-template-library .demo-template-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px) {
+  .demo-template-library {
+    padding: 22px;
+  }
+  .demo-template-library .demo-template-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .demo-template-library {
+    padding: 17px;
+  }
+  .demo-template-library .demo-template-label-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .demo-template-library .demo-template-grid {
+    grid-template-columns: 1fr;
+  }
+  .demo-template-library .demo-template-card {
+    grid-template-columns: 112px 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    min-height: 88px;
+  }
+  .demo-template-library .template-mini {
+    height: 62px;
+  }
+}

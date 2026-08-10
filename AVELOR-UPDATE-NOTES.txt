@@ -1,0 +1,26 @@
+AVELOR Homepage Refinement
+==========================
+
+Updated while preserving the existing black/gold identity and hero design.
+
+Changes included:
+- Added a prominent AVELOR AI demo link in the hero.
+- Updated AI demo section for 21 template styles and all business types.
+- Kept founder-led positioning and factual trust strip.
+- Refined Website Maintenance and Digital Marketing wording.
+- Changed Fast Delivery to Structured Delivery.
+- Changed Latest Technology to Performance-Focused Build.
+- Reframed portfolio as Selected Creative Work / Concept Projects.
+- Removed company names from homepage concept-project titles.
+- Balanced featured portfolio across web, 3D and graphic design.
+- Simplified the homepage process from 7 steps to 5.
+- Kept What You Can Expect section and WhatsApp visibility.
+- Improved homepage title and meta description for Doha/Qatar positioning.
+- Added an AVELOR AI Demo link in the footer.
+- No fake testimonials or client claims were added.
+
+Main modified files:
+- index.html
+- js/i18n.js
+- js/demo-entry.js
+- css/demo-entry.css

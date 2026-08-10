@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/rtl.css">
   <link rel="stylesheet" href="css/chatbot.css">
-  <link rel="stylesheet" href="css/demo.css">
+  <link rel="stylesheet" href="css/demo.css?v=20260808-21-visible">
 </head>
 <body>
 
@@ -68,10 +68,24 @@
 
   <section class="demo-builder-section">
     <div class="container">
+      <section class="demo-template-library" aria-labelledby="template-label">
+        <div class="demo-panel-head demo-template-library-head">
+          <span class="demo-step">01</span>
+          <div>
+            <div class="demo-template-label-row">
+              <h2 id="template-label" data-demo-i18n="templateLabel">Choose a Website Template</h2>
+              <span class="demo-template-count">21 Templates</span>
+            </div>
+            <p class="demo-template-help" data-demo-i18n="templateHelp">All 21 templates are shown below. Each uses a genuinely different page composition, not only a different colour.</p>
+          </div>
+        </div>
+        <div class="demo-template-grid" id="demo-template-grid" role="radiogroup" aria-labelledby="template-label"></div>
+      </section>
+
       <div class="demo-builder">
         <aside class="demo-form-panel" aria-labelledby="demo-form-title">
           <div class="demo-panel-head">
-            <span class="demo-step">01</span>
+            <span class="demo-step">02</span>
             <div>
               <h2 id="demo-form-title" data-demo-i18n="formTitle">Business Information</h2>
               <p data-demo-i18n="formText">Complete the details below to generate your concept.</p>
@@ -79,14 +93,8 @@
           </div>
 
           <form id="demo-generator-form" novalidate>
+            <input type="hidden" id="industry" name="industry" value="Construction Company">
             <div class="demo-field-grid">
-              <div class="demo-field demo-field-full">
-                <div class="demo-template-label-row"><label id="template-label" data-demo-i18n="templateLabel">Choose a Website Template</label><span class="demo-template-count">21</span></div>
-                <p class="demo-help demo-template-help" data-demo-i18n="templateHelp">Select one of 21 industry-specific designs. You can customise the colours and content.</p>
-                <div class="demo-template-grid" id="demo-template-grid" role="radiogroup" aria-labelledby="template-label"></div>
-                <input type="hidden" id="industry" name="industry" value="Construction Company">
-              </div>
-
               <div class="demo-field demo-field-full">
                 <label for="business-name" data-demo-i18n="businessName">Business Name</label>
                 <input id="business-name" name="businessName" type="text" value="Apex Construction" maxlength="80" required autocomplete="organization">
@@ -168,7 +176,7 @@
         <section class="demo-preview-panel" aria-labelledby="demo-preview-title">
           <div class="demo-preview-toolbar">
             <div>
-              <span class="demo-step">02</span>
+              <span class="demo-step">03</span>
               <h2 id="demo-preview-title" data-demo-i18n="previewTitle">Live Website Preview</h2>
             </div>
             <div class="demo-device-switch" role="group" aria-label="Preview size">
@@ -290,7 +298,7 @@
 <script src="js/menu.js"></script>
 <script src="js/scroll.js"></script>
 <script src="js/animation.js"></script>
-<script src="js/demo.js"></script>
+<script src="js/demo.js?v=20260808-21-visible"></script>
 <script src="js/chatbot.js"></script>
 </body>
 </html>

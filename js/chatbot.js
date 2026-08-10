@@ -7,7 +7,7 @@
 
   const copy = {
     en: {
-      launcher: 'AI Chat',
+      launcher: 'AVELOR AI',
       title: 'AVELOR AI Assistant',
       status: 'Online · AI-powered',
       close: 'Close chat',
@@ -78,7 +78,7 @@
 
   function icon(name) {
     const icons = {
-      chat: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5.5h16v11H9l-5 3v-14Z"/><path d="M8 10h8M8 13h5"/></svg>',
+      chat: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="4.5" y="8.5" width="15" height="11" rx="4"/><path d="M12 8.5V5.5"/><circle cx="12" cy="4" r="1.35" fill="currentColor" stroke="none"/><circle cx="9" cy="14" r="1.35" fill="currentColor" stroke="none"/><circle cx="15" cy="14" r="1.35" fill="currentColor" stroke="none"/><path d="M9.5 17.5h5"/><path d="M2.5 12.5v3M21.5 12.5v3"/></svg>',
       close: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>',
       trash: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M9 7V4h6v3M7 7l1 13h8l1-13M10 11v5M14 11v5"/></svg>',
       send: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m4 4 16 8-16 8 3-8-3-8Z"/><path d="M7 12h13"/></svg>',

@@ -200,3 +200,36 @@ html[dir="rtl"] .ai-demo-orbit { right: auto; left: 2%; }
   .ai-demo-mini-screen { min-height: 205px; padding: 28px 24px; }
   .ai-demo-orbit { width: 62px; height: 62px; }
 }
+
+
+/* Small AI entry directly in the hero — keeps the primary black/gold identity intact. */
+.hero-ai-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  margin-top: 18px;
+  color: var(--gold-soft);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .01em;
+  transition: color .25s ease, transform .25s ease;
+}
+.hero-ai-link:hover { color: var(--gold); transform: translateX(3px); }
+.hero-ai-link svg { width: 14px; height: 14px; }
+.hero-ai-chip {
+  display: inline-grid;
+  place-items: center;
+  min-width: 31px;
+  height: 24px;
+  padding: 0 7px;
+  border: 1px solid rgba(212,175,55,.5);
+  border-radius: 999px;
+  background: rgba(212,175,55,.08);
+  color: var(--gold-soft);
+  font-size: 10px;
+  letter-spacing: .12em;
+}
+@media (max-width: 640px) {
+  .hero-ai-link { font-size: 12px; line-height: 1.4; }
+}

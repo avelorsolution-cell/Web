@@ -1,0 +1,10 @@
+AVELOR AI DEMO — 21 TEMPLATE VISUAL V3
+
+Upload/replace these files in the same GitHub locations:
+- demo.html
+- css/demo.css
+- js/demo.js
+
+No Cloudflare Worker update is required. The existing /generate-demo endpoint accepts the selected industry dynamically.
+
+After GitHub Pages deploys, hard refresh https://avelorsolutions.com/demo.html

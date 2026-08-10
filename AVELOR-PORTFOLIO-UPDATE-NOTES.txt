@@ -1,0 +1,31 @@
+AVELOR Portfolio Upgrade
+
+What changed
+- 24 visible portfolio cards across Web Design, Branding, Graphic Design, 3D Visualization and AutoCAD Drafting.
+- 10 new self-initiated concept projects added for stronger service balance.
+- Every portfolio card is now clickable.
+- "View Project" now opens a full project-detail modal with project overview, concept deliverables, tags, gallery navigation and contact actions.
+- Multi-image Masjid and Cafe concepts open as galleries.
+- English and Arabic project-detail content included.
+- Homepage Selected Creative Work now links directly to the matching detailed portfolio project.
+- Real brand/client implications were removed from visible concept-project titles.
+- All new items remain clearly labelled as Concept Project.
+
+Upload-only files
+index.html
+portfolio.html
+css/portfolio.css
+js/portfolio.js
+js/i18n.js
+images/portfolio/property-site.svg
+images/portfolio/clinic-site.svg
+images/portfolio/hotel-site.svg
+images/portfolio/construction-site.svg
+images/portfolio/brand-system.svg
+images/portfolio/social-campaign.svg
+images/portfolio/corporate-profile.svg
+images/portfolio/ai-demo.svg
+images/portfolio/restaurant-brand.svg
+images/portfolio/property-brand.svg
+
+No Cloudflare Worker update is required.

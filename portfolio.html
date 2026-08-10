@@ -54,121 +54,237 @@
 
   <section class="portfolio-disclaimer">
     <div class="container">
-      <p data-i18n="pf.disclaimer">These self-initiated concept projects were created to demonstrate AVELOR's design process and creative capabilities. They were not commissioned by the featured brands shown.</p>
+      <p data-i18n="pf.disclaimer">All portfolio items shown here are self-initiated concept projects unless clearly stated otherwise. They demonstrate AVELOR's design process and creative capabilities and are not presented as commissioned client work.</p>
     </div>
   </section>
 
   <section>
     <div class="container">
-      <div class="filter-bar reveal">
-        <button class="filter-btn is-active" data-filter="all" data-i18n="pf.filter.all">All</button>
-        <button class="filter-btn" data-filter="website" data-i18n="svc.web">Website</button>
-        <button class="filter-btn" data-filter="graphic-design" data-i18n="svc.graphic">Graphic Design</button>
-        <button class="filter-btn" data-filter="3d" data-i18n="svc.3d">3D Visualization</button>
-        <button class="filter-btn" data-filter="autocad" data-i18n="svc.autocad">AutoCAD Drafting</button>
+      <div class="filter-bar reveal" aria-label="Portfolio filters">
+        <button class="filter-btn is-active" data-filter="all"><span data-i18n="pf.filter.all">All</span><span class="filter-count" aria-hidden="true"></span></button>
+        <button class="filter-btn" data-filter="website"><span data-i18n="svc.web">Website</span><span class="filter-count" aria-hidden="true"></span></button>
+        <button class="filter-btn" data-filter="branding"><span data-i18n="svc.branding">Branding</span><span class="filter-count" aria-hidden="true"></span></button>
+        <button class="filter-btn" data-filter="graphic-design"><span data-i18n="svc.graphic">Graphic Design</span><span class="filter-count" aria-hidden="true"></span></button>
+        <button class="filter-btn" data-filter="3d"><span data-i18n="svc.3d">3D Visualization</span><span class="filter-count" aria-hidden="true"></span></button>
+        <button class="filter-btn" data-filter="autocad"><span data-i18n="svc.autocad">AutoCAD Drafting</span><span class="filter-count" aria-hidden="true"></span></button>
       </div>
 
-      <div class="portfolio-grid">
-        <div class="portfolio-card" data-category="3d">
+      <div class="portfolio-grid" id="portfolio-grid">
+        <article class="portfolio-card" data-category="3d" data-project="smart-home" data-start-image="0" tabindex="0" role="button" aria-label="View project">
           <div class="portfolio-thumb"><img src="images/portfolio/smart_house.jpg" alt="Smart Home exterior 3D render" loading="lazy">
-            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
           </div>
-          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.3d">3D Visualization</span><h3 data-i18n="pf.card1.title">Smart Home — Exterior Render</h3><p data-i18n="pf.card1.desc">Photorealistic exterior visualization for a smart residential concept.</p></div>
-        </div>
+          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.3d">3D Visualization</span><h3 data-i18n="pf.card1.title">Project</h3><p data-i18n="pf.card1.desc">Concept description.</p></div>
+        </article>
 
-        <div class="portfolio-card" data-category="3d">
+        <article class="portfolio-card" data-category="3d" data-project="single-story-house" data-start-image="0" tabindex="0" role="button" aria-label="View project">
           <div class="portfolio-thumb"><img src="images/portfolio/house.jpg" alt="Single story house exterior 3D render" loading="lazy">
-            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
           </div>
-          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.3d">3D Visualization</span><h3 data-i18n="pf.card2.title">Single Story House — Exterior Render</h3><p data-i18n="pf.card2.desc">Exterior render for a single-story residential build.</p></div>
-        </div>
+          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.3d">3D Visualization</span><h3 data-i18n="pf.card2.title">Project</h3><p data-i18n="pf.card2.desc">Concept description.</p></div>
+        </article>
 
-        <div class="portfolio-card" data-category="autocad">
-          <div class="portfolio-thumb"><img src="images/portfolio/autocad_drawing.jpg" alt="Masjid AutoCAD floor plans and elevations" loading="lazy">
-            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <article class="portfolio-card" data-category="autocad" data-project="masjid-drafting" data-start-image="0" tabindex="0" role="button" aria-label="View project">
+          <div class="portfolio-thumb"><img src="images/portfolio/autocad_drawing.jpg" alt="Masjid technical drawing concept" loading="lazy">
+            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
           </div>
-          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.autocad">AutoCAD Drafting</span><h3 data-i18n="pf.card3.title">Masjid — Floor Plans, Elevations &amp; Section</h3><p data-i18n="pf.card3.desc">Technical floor plans, elevations and section drawings.</p></div>
-        </div>
+          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.autocad">AutoCAD Drafting</span><h3 data-i18n="pf.card3.title">Project</h3><p data-i18n="pf.card3.desc">Concept description.</p></div>
+        </article>
 
-        <div class="portfolio-card" data-category="3d">
-          <div class="portfolio-thumb"><img src="images/portfolio/full_masjid.jpg" alt="Masjid full exterior 3D render" loading="lazy">
-            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <article class="portfolio-card" data-category="3d" data-project="masjid-visualization" data-start-image="0" tabindex="0" role="button" aria-label="View project">
+          <div class="portfolio-thumb"><img src="images/portfolio/full_masjid.jpg" alt="Masjid full exterior visualization" loading="lazy">
+            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
           </div>
-          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.3d">3D Visualization</span><h3 data-i18n="pf.card4.title">Masjid — Full Exterior Render</h3><p data-i18n="pf.card4.desc">Complete exterior visualization for a masjid project.</p></div>
-        </div>
+          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.3d">3D Visualization</span><h3 data-i18n="pf.card4.title">Project</h3><p data-i18n="pf.card4.desc">Concept description.</p></div>
+        </article>
 
-        <div class="portfolio-card" data-category="3d">
-          <div class="portfolio-thumb"><img src="images/portfolio/masjid_fornt.jpg" alt="Masjid front entrance 3D render" loading="lazy">
-            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <article class="portfolio-card" data-category="3d" data-project="masjid-visualization" data-start-image="1" tabindex="0" role="button" aria-label="View project">
+          <div class="portfolio-thumb"><img src="images/portfolio/masjid_fornt.jpg" alt="Masjid entrance visualization" loading="lazy">
+            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
           </div>
-          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.3d">3D Visualization</span><h3 data-i18n="pf.card5.title">Masjid — Front Entrance</h3><p data-i18n="pf.card5.desc">Detailed render of the main entrance facade.</p></div>
-        </div>
+          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.3d">3D Visualization</span><h3 data-i18n="pf.card5.title">Project</h3><p data-i18n="pf.card5.desc">Concept description.</p></div>
+        </article>
 
-        <div class="portfolio-card" data-category="3d">
-          <div class="portfolio-thumb"><img src="images/portfolio/green_carpet.jpg" alt="Masjid ground floor corridor interior render" loading="lazy">
-            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <article class="portfolio-card" data-category="3d" data-project="masjid-visualization" data-start-image="2" tabindex="0" role="button" aria-label="View project">
+          <div class="portfolio-thumb"><img src="images/portfolio/green_carpet.jpg" alt="Masjid ground-floor interior visualization" loading="lazy">
+            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
           </div>
-          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.3d">3D Visualization</span><h3 data-i18n="pf.card6.title">Masjid — Ground Floor Corridor</h3><p data-i18n="pf.card6.desc">Interior visualization of the ground floor prayer corridor.</p></div>
-        </div>
+          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.3d">3D Visualization</span><h3 data-i18n="pf.card6.title">Project</h3><p data-i18n="pf.card6.desc">Concept description.</p></div>
+        </article>
 
-        <div class="portfolio-card" data-category="3d">
-          <div class="portfolio-thumb"><img src="images/portfolio/blue_carpet.jpg" alt="Masjid first floor corridor interior render" loading="lazy">
-            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <article class="portfolio-card" data-category="3d" data-project="masjid-visualization" data-start-image="3" tabindex="0" role="button" aria-label="View project">
+          <div class="portfolio-thumb"><img src="images/portfolio/blue_carpet.jpg" alt="Masjid first-floor interior visualization" loading="lazy">
+            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
           </div>
-          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.3d">3D Visualization</span><h3 data-i18n="pf.card7.title">Masjid — First Floor Corridor</h3><p data-i18n="pf.card7.desc">Interior visualization of the first floor prayer corridor.</p></div>
-        </div>
+          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.3d">3D Visualization</span><h3 data-i18n="pf.card7.title">Project</h3><p data-i18n="pf.card7.desc">Concept description.</p></div>
+        </article>
 
-        <div class="portfolio-card" data-category="3d">
-          <div class="portfolio-thumb"><img src="images/portfolio/cafe_3d_01.jpg" alt="Cafe pastry area interior 3D render" loading="lazy">
-            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <article class="portfolio-card" data-category="3d" data-project="cafe-interior" data-start-image="0" tabindex="0" role="button" aria-label="View project">
+          <div class="portfolio-thumb"><img src="images/portfolio/cafe_3d_01.jpg" alt="Boutique cafe pastry area interior concept" loading="lazy">
+            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
           </div>
-          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.3d">3D Visualization</span><h3 data-i18n="pf.card8.title">Pastry Area — Cafe Interior</h3><p data-i18n="pf.card8.desc">Interior render for the pastry display area, Integrated Group Doha.</p></div>
-        </div>
+          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.3d">3D Visualization</span><h3 data-i18n="pf.card8.title">Project</h3><p data-i18n="pf.card8.desc">Concept description.</p></div>
+        </article>
 
-        <div class="portfolio-card" data-category="3d">
-          <div class="portfolio-thumb"><img src="images/portfolio/cafe_3d_02.jpg" alt="Cafe interior 3D render" loading="lazy">
-            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <article class="portfolio-card" data-category="3d" data-project="cafe-interior" data-start-image="1" tabindex="0" role="button" aria-label="View project">
+          <div class="portfolio-thumb"><img src="images/portfolio/cafe_3d_02.jpg" alt="Boutique cafe interior concept" loading="lazy">
+            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
           </div>
-          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.3d">3D Visualization</span><h3 data-i18n="pf.card9.title">Cafe Interior — Integrated Group Doha</h3><p data-i18n="pf.card9.desc">Full interior visualization for a boutique cafe fit-out.</p></div>
-        </div>
+          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.3d">3D Visualization</span><h3 data-i18n="pf.card9.title">Project</h3><p data-i18n="pf.card9.desc">Concept description.</p></div>
+        </article>
 
-        <div class="portfolio-card" data-category="3d">
-          <div class="portfolio-thumb"><img src="images/portfolio/cafe_3d_03.jpg" alt="Cafe interior night mode 3D render" loading="lazy">
-            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <article class="portfolio-card" data-category="3d" data-project="cafe-interior" data-start-image="2" tabindex="0" role="button" aria-label="View project">
+          <div class="portfolio-thumb"><img src="images/portfolio/cafe_3d_03.jpg" alt="Boutique cafe night lighting concept" loading="lazy">
+            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
           </div>
-          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.3d">3D Visualization</span><h3 data-i18n="pf.card10.title">Night Mode — Cafe Interior</h3><p data-i18n="pf.card10.desc">Evening lighting variant of the cafe interior render.</p></div>
-        </div>
+          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.3d">3D Visualization</span><h3 data-i18n="pf.card10.title">Project</h3><p data-i18n="pf.card10.desc">Concept description.</p></div>
+        </article>
 
-        <div class="portfolio-card" data-category="graphic-design">
-          <div class="portfolio-thumb"><img src="images/portfolio/catalogue.jpg" alt="Lordex Lighting product catalog design" loading="lazy">
-            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <article class="portfolio-card" data-category="graphic-design" data-project="lighting-catalogue" data-start-image="0" tabindex="0" role="button" aria-label="View project">
+          <div class="portfolio-thumb"><img src="images/portfolio/catalogue.jpg" alt="Lighting product catalogue concept" loading="lazy">
+            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
           </div>
-          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.graphic">Graphic Design</span><h3 data-i18n="pf.card11.title">Lordex Lighting — Product Catalog</h3><p data-i18n="pf.card11.desc">Full product catalog layout and design for a lighting brand.</p></div>
-        </div>
+          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.graphic">Graphic Design</span><h3 data-i18n="pf.card11.title">Project</h3><p data-i18n="pf.card11.desc">Concept description.</p></div>
+        </article>
 
-        <div class="portfolio-card" data-category="graphic-design">
-          <div class="portfolio-thumb"><img src="images/portfolio/poster.jpg" alt="The Royal Light New Year poster design" loading="lazy">
-            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <article class="portfolio-card" data-category="graphic-design" data-project="lighting-campaign" data-start-image="0" tabindex="0" role="button" aria-label="View project">
+          <div class="portfolio-thumb"><img src="images/portfolio/poster.jpg" alt="New Year lighting campaign concept" loading="lazy">
+            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
           </div>
-          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.graphic">Graphic Design</span><h3 data-i18n="pf.card12.title">The Royal Light — New Year 2026 Poster</h3><p data-i18n="pf.card12.desc">Festive product launch poster design.</p></div>
-        </div>
+          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.graphic">Graphic Design</span><h3 data-i18n="pf.card12.title">Project</h3><p data-i18n="pf.card12.desc">Concept description.</p></div>
+        </article>
 
-        <div class="portfolio-card" data-category="website">
-          <div class="portfolio-thumb"><img src="images/portfolio/lordex_web.jpg" alt="Lordex Lighting website design" loading="lazy">
-            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <article class="portfolio-card" data-category="website" data-project="lighting-product-site" data-start-image="0" tabindex="0" role="button" aria-label="View project">
+          <div class="portfolio-thumb"><img src="images/portfolio/lordex_web.jpg" alt="Lighting products website concept" loading="lazy">
+            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
           </div>
-          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.web">Web Design</span><h3 data-i18n="pf.card13.title">Lordex Lighting — Website</h3><p data-i18n="pf.card13.desc">Website UI design for a lighting products brand.</p></div>
-        </div>
+          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.web">Web Design</span><h3 data-i18n="pf.card13.title">Project</h3><p data-i18n="pf.card13.desc">Concept description.</p></div>
+        </article>
 
-        <div class="portfolio-card" data-category="website">
-          <div class="portfolio-thumb"><img src="images/portfolio/web_home.jpg" alt="The Royal Light website design" loading="lazy">
-            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <article class="portfolio-card" data-category="website" data-project="lighting-company-site" data-start-image="0" tabindex="0" role="button" aria-label="View project">
+          <div class="portfolio-thumb"><img src="images/portfolio/web_home.jpg" alt="Premium lighting company website concept" loading="lazy">
+            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
           </div>
-          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.web">Web Design</span><h3 data-i18n="pf.card14.title">The Royal Light — Website</h3><p data-i18n="pf.card14.desc">Company profile website design and build.</p></div>
-        </div>
+          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.web">Web Design</span><h3 data-i18n="pf.card14.title">Project</h3><p data-i18n="pf.card14.desc">Concept description.</p></div>
+        </article>
+
+
+        <article class="portfolio-card" data-category="website" data-project="product-identification-system" data-start-image="0" tabindex="0" role="button" aria-label="View project">
+          <div class="portfolio-thumb"><img src="images/portfolio/product-system-catalogue.webp" alt="Product identification system and admin panel" loading="lazy">
+            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+          </div>
+          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.web">Web Design</span><h3 data-i18n="pf.card25.title">Project</h3><p data-i18n="pf.card25.desc">Concept description.</p></div>
+        </article>
+
+        <article class="portfolio-card" data-category="website" data-project="property-landing" data-start-image="0" tabindex="0" role="button" aria-label="View project">
+          <div class="portfolio-thumb"><img src="images/portfolio/property-site.svg" alt="Real estate landing page concept" loading="lazy">
+            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+          </div>
+          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.web">Web Design</span><h3 data-i18n="pf.card15.title">Project</h3><p data-i18n="pf.card15.desc">Concept description.</p></div>
+        </article>
+
+        <article class="portfolio-card" data-category="website" data-project="clinic-site" data-start-image="0" tabindex="0" role="button" aria-label="View project">
+          <div class="portfolio-thumb"><img src="images/portfolio/clinic-site.svg" alt="Medical clinic website concept" loading="lazy">
+            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+          </div>
+          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.web">Web Design</span><h3 data-i18n="pf.card16.title">Project</h3><p data-i18n="pf.card16.desc">Concept description.</p></div>
+        </article>
+
+        <article class="portfolio-card" data-category="website" data-project="hotel-site" data-start-image="0" tabindex="0" role="button" aria-label="View project">
+          <div class="portfolio-thumb"><img src="images/portfolio/hotel-site.svg" alt="Boutique hotel website concept" loading="lazy">
+            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+          </div>
+          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.web">Web Design</span><h3 data-i18n="pf.card17.title">Project</h3><p data-i18n="pf.card17.desc">Concept description.</p></div>
+        </article>
+
+        <article class="portfolio-card" data-category="website" data-project="construction-site" data-start-image="0" tabindex="0" role="button" aria-label="View project">
+          <div class="portfolio-thumb"><img src="images/portfolio/construction-site.svg" alt="Construction company website concept" loading="lazy">
+            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+          </div>
+          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.web">Web Design</span><h3 data-i18n="pf.card18.title">Project</h3><p data-i18n="pf.card18.desc">Concept description.</p></div>
+        </article>
+
+        <article class="portfolio-card" data-category="branding" data-project="premium-brand-system" data-start-image="0" tabindex="0" role="button" aria-label="View project">
+          <div class="portfolio-thumb"><img src="images/portfolio/brand-system.svg" alt="Premium brand identity system concept" loading="lazy">
+            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+          </div>
+          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.branding">Branding</span><h3 data-i18n="pf.card19.title">Project</h3><p data-i18n="pf.card19.desc">Concept description.</p></div>
+        </article>
+
+        <article class="portfolio-card" data-category="graphic-design" data-project="social-campaign" data-start-image="0" tabindex="0" role="button" aria-label="View project">
+          <div class="portfolio-thumb"><img src="images/portfolio/social-campaign.svg" alt="Social media campaign design concept" loading="lazy">
+            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+          </div>
+          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.graphic">Graphic Design</span><h3 data-i18n="pf.card20.title">Project</h3><p data-i18n="pf.card20.desc">Concept description.</p></div>
+        </article>
+
+        <article class="portfolio-card" data-category="graphic-design" data-project="corporate-profile" data-start-image="0" tabindex="0" role="button" aria-label="View project">
+          <div class="portfolio-thumb"><img src="images/portfolio/corporate-profile.svg" alt="Corporate profile brochure concept" loading="lazy">
+            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+          </div>
+          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.graphic">Graphic Design</span><h3 data-i18n="pf.card21.title">Project</h3><p data-i18n="pf.card21.desc">Concept description.</p></div>
+        </article>
+
+        <article class="portfolio-card" data-category="website" data-project="ai-demo" data-start-image="0" tabindex="0" role="button" aria-label="View project">
+          <div class="portfolio-thumb"><img src="images/portfolio/ai-demo.svg" alt="AVELOR AI website demo experience" loading="lazy">
+            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+          </div>
+          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.web">Web Design</span><h3 data-i18n="pf.card22.title">Project</h3><p data-i18n="pf.card22.desc">Concept description.</p></div>
+        </article>
+
+        <article class="portfolio-card" data-category="branding" data-project="restaurant-brand" data-start-image="0" tabindex="0" role="button" aria-label="View project">
+          <div class="portfolio-thumb"><img src="images/portfolio/restaurant-brand.svg" alt="Restaurant brand identity concept" loading="lazy">
+            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+          </div>
+          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.branding">Branding</span><h3 data-i18n="pf.card23.title">Project</h3><p data-i18n="pf.card23.desc">Concept description.</p></div>
+        </article>
+
+        <article class="portfolio-card" data-category="branding" data-project="property-brand" data-start-image="0" tabindex="0" role="button" aria-label="View project">
+          <div class="portfolio-thumb"><img src="images/portfolio/property-brand.svg" alt="Luxury property brand identity concept" loading="lazy">
+            <div class="portfolio-overlay"><span class="view-btn"><span data-i18n="common.viewproject">View Project</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+          </div>
+          <div class="portfolio-info"><span class="concept-badge" data-i18n="pf.conceptbadge">Concept Project</span><span class="cat" data-i18n="svc.branding">Branding</span><h3 data-i18n="pf.card24.title">Project</h3><p data-i18n="pf.card24.desc">Concept description.</p></div>
+        </article>
       </div>
     </div>
   </section>
+
+  <div class="project-modal" id="project-modal" aria-hidden="true">
+    <div class="project-modal-backdrop" data-project-close></div>
+    <div class="project-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+      <button class="project-modal-close" type="button" data-project-close aria-label="Close project details">×</button>
+      <div class="project-modal-media">
+        <div class="project-main-image-wrap">
+          <img id="project-modal-image" src="" alt="">
+          <button class="project-gallery-nav project-gallery-prev" type="button" aria-label="Previous project image">‹</button>
+          <button class="project-gallery-nav project-gallery-next" type="button" aria-label="Next project image">›</button>
+        </div>
+        <div class="project-gallery-thumbs" id="project-gallery-thumbs"></div>
+      </div>
+      <div class="project-modal-content">
+        <div class="project-modal-meta">
+          <span class="concept-badge" id="project-modal-badge">Concept Project</span>
+          <span class="project-modal-category" id="project-modal-category"></span>
+        </div>
+        <h2 id="project-modal-title"></h2>
+        <p class="project-modal-summary" id="project-modal-summary"></p>
+        <div class="project-detail-block">
+          <h3 id="project-overview-heading">Project Overview</h3>
+          <p id="project-modal-overview"></p>
+        </div>
+        <div class="project-detail-block">
+          <h3 id="project-deliverables-heading">Concept Deliverables</h3>
+          <ul class="project-deliverables" id="project-modal-deliverables"></ul>
+        </div>
+        <div class="project-tags" id="project-modal-tags"></div>
+        <div class="project-modal-actions">
+          <a href="contact.html" class="btn btn-gold" id="project-contact-btn">Start a Similar Project</a>
+          <a href="https://wa.me/97433976563" target="_blank" rel="noopener" class="btn btn-outline" id="project-whatsapp-btn">Discuss on WhatsApp</a>
+        </div>
+        <p class="project-concept-note" id="project-concept-note">This is a self-initiated AVELOR concept created to demonstrate design direction and capability. It is not presented as commissioned client work.</p>
+      </div>
+    </div>
+  </div>
 
   <section class="cta-section">
     <div class="container">
