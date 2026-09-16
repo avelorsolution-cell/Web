@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEMMA – Interactive Customer Prototype</title>
+<style>
+:root{
+  --navy:#172033; --navy2:#26334f; --teal:#19b8aa; --teal2:#0f8f84;
+  --soft:#eaf9f7; --bg:#eef3f4; --card:#fff; --line:#e4e8eb; --muted:#6b7280;
+  --success:#24a37b;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:radial-gradient(circle at top left,#e7f8f5 0,#f5f7fa 45%,#edf1f4 100%);
+  font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--navy);min-height:100vh;
+}
+.wrap{min-height:100vh;display:grid;grid-template-columns:minmax(290px,410px) 390px;gap:36px;align-items:center;justify-content:center;padding:28px}
+.presenter{padding:16px 8px}
+.eyebrow{display:inline-block;background:var(--soft);color:var(--teal2);font-weight:800;font-size:12px;border-radius:999px;padding:8px 12px}
+.presenter h1{font-size:42px;line-height:1.02;margin:14px 0 12px;letter-spacing:-1px}
+.presenter p{color:var(--muted);font-size:15px;line-height:1.6}
+.presenter .flow{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;margin-top:18px;box-shadow:0 8px 24px rgba(20,32,50,.05)}
+.presenter .flow b{display:block;margin-bottom:6px}
+.presenter .small{font-size:12px;margin-top:14px}
+.phone{
+  width:390px;height:820px;background:#111;border-radius:43px;padding:11px;
+  box-shadow:0 30px 80px rgba(23,32,51,.25);position:relative
+}
+.viewport{width:100%;height:100%;background:#f8fafb;border-radius:33px;overflow:hidden;position:relative}
+.screen{position:absolute;inset:0;background:#f8fafb;display:none;overflow:auto;padding:0 18px 90px}
+.screen:target{display:block}
+#start{display:block}
+.screen:target ~ #start{display:none}
+.status{height:28px;margin:0 -18px;padding:0 17px;background:#fff;display:flex;justify-content:space-between;align-items:center;font-size:11px;font-weight:800}
+.header{display:flex;justify-content:space-between;align-items:center;padding:15px 0 8px}
+.logo{font-weight:900;font-size:20px;letter-spacing:.8px}.logo i{font-style:normal;color:var(--teal)}
+.icon{width:38px;height:38px;border:1px solid var(--line);border-radius:12px;background:#fff;display:grid;place-items:center;text-decoration:none;color:var(--navy)}
+.back{margin-right:8px}
+.hrow{display:flex;align-items:center}
+h2{font-size:27px;margin:10px 0 6px;letter-spacing:-.4px}
+h3{font-size:16px;margin:16px 0 9px}
+.sub{font-size:13px;color:var(--muted);line-height:1.45}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px;margin:10px 0}
+.row{display:flex;align-items:center;gap:12px}
+.grow{flex:1}
+.avatar{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#d8e9e6,#cbd8e4);display:grid;place-items:center;font-size:25px}
+.verify{color:var(--teal2);font-weight:900}
+.rating{font-size:13px;font-weight:800}
+.price{font-weight:900}
+.search{background:#fff;border:1px solid var(--line);border-radius:14px;padding:13px 14px;color:#8c96a0;margin:13px 0}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+.tile{background:#fff;border:1px solid var(--line);border-radius:14px;padding:11px 5px;text-align:center;font-size:10px;color:var(--navy);text-decoration:none}
+.tile b{display:block;font-size:23px;margin-bottom:5px}
+.section{display:flex;justify-content:space-between;align-items:center;margin-top:15px}
+.section b{font-size:15px}.section a{font-size:12px;color:var(--teal2);text-decoration:none;font-weight:800}
+.banner{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;border-radius:18px;padding:16px;margin:11px 0}
+.banner .pct{font-size:29px;font-weight:900;margin-top:7px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 11px;font-size:12px;text-decoration:none;color:var(--navy)}
+.btn{display:block;text-align:center;text-decoration:none;width:100%;border-radius:14px;padding:14px 16px;font-weight:850;margin-top:10px;border:1px solid transparent}
+.primary{background:var(--teal);color:white}.secondary{background:#fff;color:var(--navy);border-color:var(--line)}
+.bottom{position:absolute;left:0;right:0;bottom:0;height:78px;background:#fff;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(5,1fr);align-items:center;padding:7px 7px 11px}
+.bottom a{text-decoration:none;color:#7d8790;text-align:center;font-size:10px}
+.bottom a b{display:block;font-size:19px;margin-bottom:2px}
+.bottom a.active{color:var(--teal2);font-weight:900}
+.hero{margin:0 -18px 16px;padding:115px 18px 18px;background:linear-gradient(135deg,#20314a,#61c6bb);color:#fff;position:relative}
+.hero .profile{display:flex;align-items:end;gap:12px}
+.hero .big{width:84px;height:84px;border-radius:20px;background:rgba(255,255,255,.17);display:grid;place-items:center;font-size:40px}
+.tabs{display:flex;gap:20px;border-bottom:1px solid var(--line);margin-bottom:13px}
+.tab{padding:9px 0;font-size:13px}.tab.on{font-weight:900;color:var(--teal2);border-bottom:2px solid var(--teal)}
+.package{border:2px solid transparent}.package.sel{border-color:var(--teal);background:var(--soft)}
+.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:7px;text-align:center;font-size:11px}
+.day{padding:8px 0;border-radius:9px}.selday{background:var(--teal);color:#fff;font-weight:900}
+.times{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.time{background:#fff;border:1px solid var(--line);padding:10px;text-align:center;border-radius:10px;font-size:12px}.timesel{background:var(--soft);border-color:var(--teal);font-weight:900}
+.payline{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed var(--line)}
+.success{padding-top:82px;text-align:center}
+.check{width:96px;height:96px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-size:54px;margin:auto;box-shadow:0 16px 32px rgba(25,184,170,.25)}
+.progress{height:10px;background:#e6ecec;border-radius:999px;overflow:hidden}.progress i{display:block;width:38%;height:100%;background:var(--teal)}
+.chart{height:145px;border-radius:16px;background:linear-gradient(#f9ffff,#edf8f6);overflow:hidden}
+.chart svg{width:100%;height:100%}
+.chat{display:flex;flex-direction:column;gap:10px;padding-bottom:65px}
+.bubble{max-width:78%;border:1px solid var(--line);background:#fff;padding:11px 13px;border-radius:16px;font-size:13px;line-height:1.4}
+.me{align-self:flex-end;background:var(--soft);border-color:#bdeee8}
+.input{position:absolute;left:0;right:0;bottom:78px;background:#fff;border-top:1px solid var(--line);padding:10px 12px;display:flex;gap:8px}
+.input span{flex:1;border:1px solid var(--line);border-radius:999px;padding:11px 14px;color:#9aa3aa;font-size:12px}
+.rolegrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:17px 0}
+.role{background:#fff;border:2px solid var(--line);border-radius:18px;padding:19px 10px;text-align:center;text-decoration:none;color:var(--navy)}
+.role b{display:block;margin:7px 0 4px}
+.splash{padding:0;display:none!important}.splash:target{display:block!important}
+#start{padding:0}
+.center{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px}
+.mark{font-size:74px;font-weight:950;letter-spacing:-7px}.mark i{font-style:normal;color:var(--teal)}
+.dots{display:flex;gap:7px;margin:15px 0}.dot{width:7px;height:7px;border-radius:50%;background:#cbd3d7}.dot.on{background:var(--teal)}
+.illus{width:180px;height:180px;border-radius:50%;background:linear-gradient(145deg,#e5f6f3,#d5e5e2);display:grid;place-items:center;font-size:80px;margin:24px auto}
+.note{font-size:11px;color:#8b949c;text-align:center;margin-top:8px}
+.mini{font-size:11px}
+.demo-menu{display:grid;gap:10px;margin-top:18px}
+.tag{display:inline-block;background:var(--soft);color:var(--teal2);padding:7px 11px;border-radius:999px;font-weight:900;font-size:11px}
+.ar{direction:rtl;text-align:right}
+.ar .row,.ar .header,.ar .section{direction:rtl}
+.ar .back{margin-left:8px;margin-right:0}
+@media(max-width:900px){
+  .wrap{display:block;padding:0}.presenter{display:none}.phone{width:100vw;height:100vh;max-width:none;border-radius:0;padding:0;background:#f8fafb}.viewport{border-radius:0}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <aside class="presenter">
+    <span class="eyebrow">Customer Approval Prototype</span>
+    <h1>HEMMA<br>Interactive Concept</h1>
+    <p>A clickable mobile concept showing the core subscriber journey, trainer journey, booking, payment, training, progress and communication.</p>
+    <div class="flow"><b>Core journey</b>Discover → Compare → Book → Pay → Train → Track → Review</div>
+    <p class="small">Prototype only. All profiles, payments, bookings and messages are simulated for presentation.</p>
+    <p class="small" style="margin-top:18px;font-weight:700;color:#172033">
+      Developed by <a href="https://avelorsolutions.com/" target="_blank" rel="noopener" style="color:#0f8f84;text-decoration:none">Avelor Solutions & Team</a>
+    </p>
+  </aside>
+
+  <div class="phone">
+    <div class="viewport">
+
+      <section class="screen" id="start">
+        <div class="center">
+          <span class="tag">INTERACTIVE CUSTOMER DEMO</span>
+          <div class="mark"><i>H</i>M</div>
+          <h2>HEMMA</h2>
+          <p class="sub">Your Fitness. Your Trainer. Your Journey.</p>
+          <div class="demo-menu" style="width:100%">
+            <a class="btn primary" href="#splash">Start Subscriber Demo</a>
+            <a class="btn secondary" href="#trainer-reg">Start Trainer Demo</a>
+            <a class="btn secondary" href="#arabic">معاينة العربية / Arabic Preview</a>
+          </div>
+          <p class="note">Customer Approval Version</p>
+          <p class="note" style="margin-top:16px;font-weight:700;color:#172033">
+            Developed by <a href="https://avelorsolutions.com/" target="_blank" rel="noopener" style="color:#0f8f84;text-decoration:none">Avelor Solutions & Team</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="screen splash" id="splash">
+        <div class="center">
+          <div class="mark"><i>H</i>M</div>
+          <h2>HEMMA</h2>
+          <p class="sub">SPORTS • FITNESS</p>
+          <p class="sub">A Stronger You</p>
+          <a class="btn primary" href="#onboarding" style="margin-top:24px">Continue</a>
+        </div>
+      </section>
+
+      <section class="screen" id="onboarding">
+        <div class="status"><span>9:41</span><span>● ● ● 100%</span></div>
+        <div class="center" style="height:auto;min-height:720px">
+          <span class="tag">DISCOVER • BOOK • TRACK</span>
+          <div class="illus">🏋️</div>
+          <h2>Find the Right Trainer</h2>
+          <p class="sub">Compare verified trainers by sport, specialty, experience, location, rating and price.</p>
+          <div class="dots"><i class="dot on"></i><i class="dot"></i><i class="dot"></i></div>
+          <a class="btn primary" href="#login">Get Started</a>
+        </div>
+      </section>
+
+      <section class="screen" id="login">
+        <div class="status"><span>9:41</span><span>● ● ● 100%</span></div>
+        <div class="header"><div class="hrow"><a class="icon back" href="#onboarding">←</a><div class="logo"><i>H</i>EMMA</div></div><a class="icon" href="#start">⌂</a></div>
+        <h2>Welcome to HEMMA</h2>
+        <p class="sub">Choose how you want to use the platform.</p>
+        <div class="rolegrid">
+          <a class="role" href="#home"><div style="font-size:38px">💪</div><b>Subscriber</b><span class="sub">Find & book trainers</span></a>
+          <a class="role" href="#trainer-reg"><div style="font-size:38px">🎯</div><b>Trainer</b><span class="sub">Grow your business</span></a>
+        </div>
+        <div class="card">
+          <b>Quick Demo Login</b>
+          <p class="sub">Continue using a demo account.</p>
+          <a class="btn secondary" href="#home">G &nbsp; Continue with Google</a>
+          <a class="btn secondary" href="#home"> &nbsp; Continue with Apple</a>
+        </div>
+      </section>
+
+      <section class="screen" id="home">
+        <div class="status"><span>9:41</span><span>● ● ● 100%</span></div>
+        <div class="header"><div class="logo"><i>H</i>EMMA</div><div class="hrow"><a class="icon" href="#arabic">ع</a><a class="icon" href="#notifications">🔔</a></div></div>
+        <h2>Good morning 👋</h2><p class="sub">Let’s move forward with your fitness journey.</p>
+        <div class="search">⌕ Find your trainer, sport or program</div>
+        <div class="section"><b>Sports Categories</b><a href="#sports">See all</a></div>
+        <div class="grid4">
+          <a class="tile" href="#sports"><b>🏋️</b>Fitness</a><a class="tile" href="#sports"><b>🏃</b>Running</a><a class="tile" href="#sports"><b>🧘</b>Yoga</a><a class="tile" href="#sports"><b>🥊</b>Boxing</a>
+        </div>
+        <div class="section"><b>Featured Trainers</b><a href="#trainers">See all</a></div>
+        <a href="#profile" style="text-decoration:none;color:inherit"><div class="card row"><div class="avatar">👤</div><div class="grow"><b>Sarah Ahmed <span class="verify">✓</span></b><div class="sub">Fitness & Strength Coach</div><div class="rating">★ 4.9 (120) • Doha</div></div><div>›</div></div></a>
+        <div class="banner"><div class="mini">ACTIVE CHALLENGE</div><b>30-Day Transformation</b><div class="pct">72%</div></div>
+        <div class="section"><b>Marketplace Preview</b><a href="#marketplace">Explore</a></div>
+        <div class="chips"><a class="chip" href="#marketplace">🥤 Nutrition</a><a class="chip" href="#marketplace">👟 Gear</a><a class="chip" href="#marketplace">📘 Programs</a></div>
+        <nav class="bottom"><a class="active" href="#home"><b>⌂</b>Home</a><a href="#sports"><b>◫</b>Discover</a><a href="#training"><b>◉</b>Training</a><a href="#progress"><b>⌁</b>Progress</a><a href="#profile"><b>◯</b>Profile</a></nav>
+      </section>
+
+      <section class="screen" id="sports">
+        <div class="status"><span>9:41</span><span>● ● ● 100%</span></div>
+        <div class="header"><div class="hrow"><a class="icon back" href="#home">←</a><div class="logo"><i>H</i>EMMA</div></div><a class="icon" href="#start">⌂</a></div>
+        <h2>Discover Sports</h2><div class="search">⌕ Search a sport</div>
+        <div class="grid4">
+          <a class="tile" href="#trainers"><b>🏋️</b>Bodybuilding</a><a class="tile" href="#trainers"><b>🏃</b>Running</a><a class="tile" href="#trainers"><b>🏊</b>Swimming</a><a class="tile" href="#trainers"><b>🧒</b>Kids</a>
+          <a class="tile" href="#trainers"><b>💪</b>Fitness</a><a class="tile" href="#trainers"><b>🧘</b>Yoga</a><a class="tile" href="#trainers"><b>🥊</b>Boxing</a><a class="tile" href="#trainers"><b>👥</b>Group</a>
+          <a class="tile" href="#trainers"><b>🤸</b>Calisthenics</a><a class="tile" href="#trainers"><b>⚽</b>Others</a>
+        </div>
+        <a class="btn primary" href="#trainers">View Trainers</a>
+        <nav class="bottom"><a href="#home"><b>⌂</b>Home</a><a class="active" href="#sports"><b>◫</b>Discover</a><a href="#training"><b>◉</b>Training</a><a href="#progress"><b>⌁</b>Progress</a><a href="#profile"><b>◯</b>Profile</a></nav>
+      </section>
+
+      <section class="screen" id="trainers">
+        <div class="status"><span>9:41</span><span>● ● ● 100%</span></div>
+        <div class="header"><div class="hrow"><a class="icon back" href="#sports">←</a><div class="logo"><i>H</i>EMMA</div></div><a class="icon" href="#start">⌂</a></div>
+        <h2>Trainers</h2><div class="search">⌕ Search trainers</div>
+        <div class="chips"><a class="chip" href="#filters">⚙ Filters</a><span class="chip">★ Rating</span><span class="chip">⌖ Location</span></div>
+        <a href="#profile" style="text-decoration:none;color:inherit"><div class="card row"><div class="avatar">👤</div><div class="grow"><b>Sarah Ahmed <span class="verify">✓</span></b><div class="sub">Fitness & Strength</div><div class="rating">★ 4.9 • 8 yrs • Doha</div></div><div class="price">QAR 150<div class="sub">from</div></div></div></a>
+        <div class="card row"><div class="avatar">👤</div><div class="grow"><b>Ahmed Khaled <span class="verify">✓</span></b><div class="sub">Bodybuilding</div><div class="rating">★ 4.8 • 6 yrs • Doha</div></div><div class="price">QAR 140<div class="sub">from</div></div></div>
+        <div class="card row"><div class="avatar">👤</div><div class="grow"><b>Omar Nasser <span class="verify">✓</span></b><div class="sub">Boxing</div><div class="rating">★ 4.7 • 5 yrs • Doha</div></div><div class="price">QAR 120<div class="sub">from</div></div></div>
+        <a class="btn secondary" href="#compare">Compare Trainers</a>
+        <nav class="bottom"><a href="#home"><b>⌂</b>Home</a><a class="active" href="#sports"><b>◫</b>Discover</a><a href="#training"><b>◉</b>Training</a><a href="#progress"><b>⌁</b>Progress</a><a href="#profile"><b>◯</b>Profile</a></nav>
+      </section>
+
+      <section class="screen" id="filters">
+        <div class="status"><span>9:41</span><span>● ● ● 100%</span></div>
+        <div class="header"><div class="hrow"><a class="icon back" href="#trainers">←</a><div class="logo"><i>H</i>EMMA</div></div></div>
+        <h2>Smart Filters</h2>
+        <div class="card"><b>Sport</b><div class="sub">All Sports ▾</div></div>
+        <div class="card"><b>Specialty</b><div class="sub">All Specialties ▾</div></div>
+        <div class="card"><b>Location</b><div class="sub">Doha ▾</div></div>
+        <div class="card"><b>Price Range</b><div class="sub">QAR 0 – 500+</div><div style="height:4px;background:linear-gradient(90deg,var(--teal) 55%,#e7ebee 55%);border-radius:5px;margin-top:12px"></div></div>
+        <div class="card"><b>Experience</b><div class="sub">Any ▾</div></div>
+        <div class="card"><b>Rating</b><div class="sub">4+ Stars ▾</div></div>
+        <a class="btn primary" href="#trainers">Apply Filters</a>
+      </section>
+
+      <section class="screen" id="compare">
+        <div class="status"><span>9:41</span><span>● ● ● 100%</span></div>
+        <div class="header"><div class="hrow"><a class="icon back" href="#trainers">←</a><div class="logo"><i>H</i>EMMA</div></div></div>
+        <h2>Compare Trainers</h2>
+        <div class="card row"><div class="grow"><b>Sarah Ahmed</b><div class="sub">Fitness</div></div><div class="grow"><b>Omar Nasser</b><div class="sub">Boxing</div></div></div>
+        <div class="card"><div class="sub">Rating</div><div class="row"><div class="grow"><b>★ 4.9</b></div><div class="grow"><b>★ 4.7</b></div></div></div>
+        <div class="card"><div class="sub">Experience</div><div class="row"><div class="grow"><b>8 Years</b></div><div class="grow"><b>5 Years</b></div></div></div>
+        <div class="card"><div class="sub">Price</div><div class="row"><div class="grow"><b>QAR 150</b></div><div class="grow"><b>QAR 120</b></div></div></div>
+        <div class="card"><div class="sub">Availability</div><div class="row"><div class="grow"><b>High</b></div><div class="grow"><b>Medium</b></div></div></div>
+        <a class="btn primary" href="#profile">Choose Sarah</a>
+      </section>
+
+      <section class="screen" id="profile">
+        <div class="status"><span>9:41</span><span>● ● ● 100%</span></div>
+        <div class="hero">
+          <div style="position:absolute;top:14px;left:18px"><a class="icon" href="#trainers">←</a></div>
+          <div class="profile"><div class="big">👤</div><div><h2 style="margin:0;color:#fff">Sarah Ahmed ✓</h2><div>Fitness & Strength Coach</div><div>★ 4.9 (120) • Doha</div></div></div>
+        </div>
+        <div class="tabs"><div class="tab on">About</div><div class="tab">Packages</div><div class="tab">Reviews</div></div>
+        <h3>About</h3><p class="sub">Certified trainer focused on strength, mobility and sustainable fitness progress.</p>
+        <div class="section"><b>Specialties</b></div><div class="chips"><span class="chip">Strength</span><span class="chip">Weight Loss</span><span class="chip">HIIT</span></div>
+        <div class="section"><b>Certifications</b></div><div class="card">✓ NASM &nbsp; ✓ CPR &nbsp; ✓ Nutrition</div>
+        <div class="section"><b>Verified Reviews</b><span class="rating">4.9 ★</span></div>
+        <div class="card"><b>Maha A.</b><div class="rating">★★★★★</div><div class="sub">Excellent coaching and very professional.</div></div>
+        <div class="row"><a class="btn secondary" href="#chat">Message</a><a class="btn primary" href="#packages">Book Now</a></div>
+      </section>
+
+      <section class="screen" id="packages">
+        <div class="status"><span>9:41</span><span>● ● ● 100%</span></div>
+        <div class="header"><div class="hrow"><a class="icon back" href="#profile">←</a><div class="logo"><i>H</i>EMMA</div></div></div>
+        <h2>Choose a Package</h2>
+        <div class="card package"><div class="row"><div class="grow"><b>Basic</b><div class="sub">4 Sessions • 60 min</div></div><div class="price">QAR 600</div></div></div>
+        <div class="card package sel"><div class="row"><div class="grow"><b>Standard</b><div class="sub">8 Sessions • 60 min</div></div><div class="price">QAR 1,100</div></div><span class="tag" style="margin-top:10px">MOST POPULAR</span></div>
+        <div class="card package"><div class="row"><div class="grow"><b>Premium</b><div class="sub">12 Sessions • 60 min</div></div><div class="price">QAR 1,500</div></div></div>
+        <div class="card"><b>Included</b><div class="sub" style="line-height:1.9">✓ Personalized plan<br>✓ Progress tracking<br>✓ In-app chat<br>✓ Trainer notes</div></div>
+        <a class="btn primary" href="#booking">Choose Standard Package</a>
+      </section>
+
+      <section class="screen" id="booking">
+        <div class="status"><span>9:41</span><span>● ● ● 100%</span></div>
+        <div class="header"><div class="hrow"><a class="icon back" href="#packages">←</a><div class="logo"><i>H</i>EMMA</div></div></div>
+        <h2>Select Date & Time</h2>
+        <div class="card"><div class="section"><b>September 2026</b><span>‹ &nbsp; ›</span></div><div class="calendar">
+          <div class="day">S</div><div class="day">M</div><div class="day">T</div><div class="day">W</div><div class="day">T</div><div class="day">F</div><div class="day">S</div>
+          <div class="day">13</div><div class="day">14</div><div class="day">15</div><div class="day selday">16</div><div class="day">17</div><div class="day">18</div><div class="day">19</div>
+        </div></div>
+        <h3>Available Times</h3><div class="times"><span class="time">09:00</span><span class="time">10:00</span><span class="time">11:00</span><span class="time">14:00</span><span class="time timesel">15:00</span><span class="time">16:00</span></div>
+        <div class="card"><b>Booking Summary</b><div class="sub" style="line-height:1.8">Sarah Ahmed<br>Standard – 8 Sessions<br>16 Sep 2026 • 15:00<br>Doha</div></div>
+        <a class="btn primary" href="#payment">Continue to Payment</a>
+      </section>
+
+      <section class="screen" id="payment">
+        <div class="status"><span>9:41</span><span>● ● ● 100%</span></div>
+        <div class="header"><div class="hrow"><a class="icon back" href="#booking">←</a><div class="logo"><i>H</i>EMMA</div></div></div>
+        <h2>Payment</h2>
+        <div class="card"><b>Order Summary</b><div class="payline"><span>Package</span><b>QAR 1,100</b></div><div class="payline"><span>Platform Fee</span><b>QAR 50</b></div><div class="payline"><span>Discount</span><b>- QAR 50</b></div><div class="payline" style="font-size:18px"><b>Total</b><b>QAR 1,100</b></div></div>
+        <h3>Payment Method</h3>
+        <div class="card">◉ Credit / Debit Card</div><div class="card">○ Apple Pay</div><div class="card">○ Google Pay</div>
+        <a class="btn primary" href="#confirmed">Pay & Confirm</a>
+        <p class="note">🔒 Demo only – no real payment is processed.</p>
+      </section>
+
+      <section class="screen" id="confirmed">
+        <div class="status"><span>9:41</span><span>● ● ● 100%</span></div>
+        <div class="success">
+          <div class="check">✓</div><h2>Booking Confirmed!</h2><p class="sub">Your session with Sarah Ahmed is booked for 16 Sep 2026 at 15:00.</p>
+          <a class="btn primary" href="#training">View My Training</a><a class="btn secondary" href="#chat">Message Trainer</a>
+        </div>
+      </section>
+
+      <section class="screen" id="training">
+        <div class="status"><span>9:41</span><span>● ● ● 100%</span></div>
+        <div class="header"><div class="logo"><i>H</i>EMMA</div><a class="icon" href="#start">⌂</a></div>
+        <h2>My Training</h2>
+        <div class="tabs"><div class="tab on">Plan</div><div class="tab">Sessions</div><div class="tab">Progress</div></div>
+        <div class="card"><div class="row"><div class="avatar">💪</div><div class="grow"><b>Strength & Fitness</b><div class="sub">with Sarah Ahmed</div><div class="sub">8 sessions • 3/8 completed</div></div></div><div class="progress" style="margin-top:12px"><i></i></div></div>
+        <div class="section"><b>Upcoming Session</b></div><div class="card"><b>16 Sep • 15:00</b><div class="sub">Strength Training • Doha</div></div>
+        <div class="section"><b>Training Plan</b></div>
+        <div class="card"><b>Upper Body Strength</b><div class="sub">Bench Press • 4 sets × 10 reps<br>Shoulder Press • 3 sets × 12 reps<br>Lat Pulldown • 4 sets × 10 reps</div><a class="btn secondary" href="#progress">View Progress</a></div>
+        <nav class="bottom"><a href="#home"><b>⌂</b>Home</a><a href="#sports"><b>◫</b>Discover</a><a class="active" href="#training"><b>◉</b>Training</a><a href="#progress"><b>⌁</b>Progress</a><a href="#profile"><b>◯</b>Profile</a></nav>
+      </section>
+
+      <section class="screen" id="progress">
+        <div class="status"><span>9:41</span><span>● ● ● 100%</span></div>
+        <div class="header"><div class="logo"><i>H</i>EMMA</div><a class="icon" href="#start">⌂</a></div>
+        <h2>My Progress</h2>
+        <div class="tabs"><div class="tab on">Overview</div><div class="tab">Measurements</div><div class="tab">Workouts</div></div>
+        <div class="card"><div class="row"><div class="grow"><div class="sub">Weight</div><div style="font-size:28px;font-weight:900">72 kg</div></div><div style="color:var(--teal2);font-weight:900">↓ 4 kg</div></div>
+          <div class="chart"><svg viewBox="0 0 300 120" preserveAspectRatio="none"><polyline points="0,85 45,75 90,79 135,62 180,68 225,52 270,45 300,42" fill="none" stroke="#19b8aa" stroke-width="4"/></svg></div>
+        </div>
+        <div class="card"><b>Body Measurements</b><div class="payline"><span>Chest</span><b>98 cm</b></div><div class="payline"><span>Waist</span><b>82 cm</b></div><div class="payline"><span>Arms</span><b>36 cm</b></div><div class="payline"><span>Thighs</span><b>58 cm</b></div></div>
+        <a class="btn primary" href="#chat">Message Trainer</a>
+        <nav class="bottom"><a href="#home"><b>⌂</b>Home</a><a href="#sports"><b>◫</b>Discover</a><a href="#training"><b>◉</b>Training</a><a class="active" href="#progress"><b>⌁</b>Progress</a><a href="#profile"><b>◯</b>Profile</a></nav>
+      </section>
+
+      <section class="screen" id="chat">
+        <div class="status"><span>9:41</span><span>● ● ● 100%</span></div>
+        <div class="header"><div class="hrow"><a class="icon back" href="#profile">←</a><div><b>Sarah Ahmed</b><div class="sub">Online</div></div></div><a class="icon" href="#start">⌂</a></div>
+        <div class="chat"><div class="bubble">Hi! Looking forward to our session tomorrow 💪</div><div class="bubble me">Me too! Anything specific I should bring?</div><div class="bubble">Just a water bottle and positive energy. See you soon!</div></div>
+        <div class="input"><span>Type a message...</span><a class="icon" href="#chat" style="background:var(--teal);color:#fff">➤</a></div>
+        <nav class="bottom"><a href="#home"><b>⌂</b>Home</a><a href="#sports"><b>◫</b>Discover</a><a href="#training"><b>◉</b>Training</a><a href="#progress"><b>⌁</b>Progress</a><a href="#profile"><b>◯</b>Profile</a></nav>
+      </section>
+
+      <section class="screen" id="notifications">
+        <div class="status"><span>9:41</span><span>● ● ● 100%</span></div>
+        <div class="header"><div class="hrow"><a class="icon back" href="#home">←</a><div class="logo"><i>H</i>EMMA</div></div></div>
+        <h2>Notifications</h2>
+        <div class="card"><b>Booking Confirmed</b><div class="sub">Your session with Sarah Ahmed is confirmed.</div></div>
+        <div class="card"><b>Upcoming Session</b><div class="sub">Tomorrow at 15:00 • Doha</div></div>
+        <div class="card"><b>New Trainer Message</b><div class="sub">Sarah sent you a new message.</div></div>
+        <div class="card"><b>Challenge Update</b><div class="sub">You reached 72% of your 30-day challenge.</div></div>
+      </section>
+
+      <section class="screen" id="marketplace">
+        <div class="status"><span>9:41</span><span>● ● ● 100%</span></div>
+        <div class="header"><div class="hrow"><a class="icon back" href="#home">←</a><div class="logo"><i>H</i>EMMA</div></div></div>
+        <span class="tag">FUTURE MODULE</span><h2>Marketplace</h2><p class="sub">Future HEMMA ecosystem modules.</p>
+        <div class="grid4"><div class="tile"><b>📘</b>Programs</div><div class="tile"><b>👟</b>Sportswear</div><div class="tile"><b>🥤</b>Nutrition</div><div class="tile"><b>🍱</b>Healthy Food</div><div class="tile"><b>🎁</b>Gifting</div><div class="tile"><b>🏆</b>Rewards</div><div class="tile"><b>🤝</b>Partners</div><div class="tile"><b>🛍️</b>Products</div></div>
+        <a class="btn secondary" href="#home">Back to Home</a>
+      </section>
+
+      <section class="screen" id="trainer-reg">
+        <div class="status"><span>9:41</span><span>● ● ● 100%</span></div>
+        <div class="header"><div class="hrow"><a class="icon back" href="#start">←</a><div class="logo"><i>H</i>EMMA</div></div></div>
+        <h2>Become a Trainer</h2><p class="sub">Create your professional profile and submit it for verification.</p>
+        <div class="card"><b>Profile Information</b><div class="sub" style="line-height:2">Full Name<br>Biography<br>Experience<br>Specialties<br>Location</div></div>
+        <div class="card">📄 <b>Upload CV</b><div class="sub">PDF / DOC</div></div>
+        <div class="card">🎓 <b>Upload Certificates</b><div class="sub">PDF / JPG / PNG</div></div>
+        <a class="btn primary" href="#trainer-verify">Submit for Verification</a>
+      </section>
+
+      <section class="screen" id="trainer-verify">
+        <div class="status"><span>9:41</span><span>● ● ● 100%</span></div>
+        <div class="header"><div class="hrow"><a class="icon back" href="#trainer-reg">←</a><div class="logo"><i>H</i>EMMA</div></div></div>
+        <div class="success" style="padding-top:55px"><div class="check" style="background:var(--soft);color:var(--teal2)">◷</div><h2>Under Review</h2><p class="sub">HEMMA is reviewing your profile and documents.</p>
+          <div class="card" style="text-align:left"><b>✓ Submitted</b><div class="payline"><span>● In Review</span><b style="color:var(--teal2)">Current</b></div><div class="sub" style="padding-top:8px">○ Approved</div></div>
+          <a class="btn primary" href="#trainer-dash">Preview Trainer Dashboard</a>
+        </div>
+      </section>
+
+      <section class="screen" id="trainer-dash">
+        <div class="status"><span>9:41</span><span>● ● ● 100%</span></div>
+        <div class="header"><div class="logo"><i>H</i>EMMA</div><a class="icon" href="#start">⌂</a></div>
+        <h2>Trainer Dashboard</h2>
+        <div class="grid4"><div class="tile"><b>24</b>Subscribers</div><div class="tile"><b>12</b>Bookings</div><div class="tile"><b>4.8</b>Rating</div><div class="tile"><b>8.4K</b>QAR</div></div>
+        <div class="section"><b>Today</b></div>
+        <div class="card"><b>15:00 • Maha</b><div class="sub">Strength Training</div></div>
+        <div class="card"><b>17:30 • Khalid</b><div class="sub">Fitness Assessment</div></div>
+        <div class="section"><b>Manage</b></div>
+        <div class="chips"><span class="chip">📅 Bookings</span><span class="chip">👥 Subscribers</span><a class="chip" href="#trainer-packages">📦 Packages</a><span class="chip">💰 Earnings</span></div>
+        <a class="btn secondary" href="#home">Switch to Subscriber Demo</a>
+      </section>
+
+      <section class="screen" id="trainer-packages">
+        <div class="status"><span>9:41</span><span>● ● ● 100%</span></div>
+        <div class="header"><div class="hrow"><a class="icon back" href="#trainer-dash">←</a><div class="logo"><i>H</i>EMMA</div></div></div>
+        <h2>Packages & Availability</h2>
+        <div class="card row"><div class="grow"><b>1-to-1 Training</b><div class="sub">QAR 150 / session</div></div><span class="verify">●</span></div>
+        <div class="card row"><div class="grow"><b>8 Session Package</b><div class="sub">QAR 1,100</div></div><span class="verify">●</span></div>
+        <div class="card"><b>Availability</b><div class="payline"><span>Sunday</span><b>16:00–20:00</b></div><div class="payline"><span>Monday</span><b>16:00–20:00</b></div><div class="payline"><span>Tuesday</span><b>17:00–21:00</b></div><div class="payline"><span>Wednesday</span><b>Unavailable</b></div></div>
+        <a class="btn primary" href="#trainer-dash">Save Changes</a>
+      </section>
+
+      <section class="screen ar" id="arabic">
+        <div class="status"><span>100% ● ● ●</span><span>9:41</span></div>
+        <div class="header"><div class="logo"><i>H</i>EMMA</div><div class="hrow"><a class="icon" href="#home">EN</a><a class="icon" href="#start">⌂</a></div></div>
+        <h2>صباح الخير 👋</h2><p class="sub">لنواصل رحلتك الرياضية مع همة.</p>
+        <div class="search">ابحث عن مدرب أو رياضة أو برنامج ⌕</div>
+        <div class="section"><b>فئات الرياضة</b><a href="#sports">عرض الكل</a></div>
+        <div class="grid4"><div class="tile"><b>🏋️</b>لياقة</div><div class="tile"><b>🏃</b>جري</div><div class="tile"><b>🧘</b>يوغا</div><div class="tile"><b>🥊</b>ملاكمة</div></div>
+        <div class="section"><b>مدربون مميزون</b></div>
+        <div class="card row"><div class="avatar">👤</div><div class="grow"><b>سارة أحمد <span class="verify">✓</span></b><div class="sub">مدربة لياقة وقوة</div><div class="rating">★ 4.9 (120) • الدوحة</div></div></div>
+        <div class="banner"><div class="mini">تحدٍ نشط</div><b>تحدي التحول 30 يوماً</b><div class="pct">72%</div></div>
+        <a class="btn primary" href="#home">Switch to English</a>
+      </section>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
